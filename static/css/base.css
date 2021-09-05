@@ -3,11 +3,15 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'WindSong';
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #F9F3EE;
 }
 
 /* from Bulma */
@@ -23,16 +27,23 @@ body {
     text-transform: none;
     font-weight: 800;
     font-size: 3.5rem;
+    font-family: 'WindSong', sans-serif;
 }
 
 .main-logo-link {
     width: fit-content;
 }
 
+.home-text {
+    text-align: right;
+    text-shadow: #222;
+}
+
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #F9F3EE;
+    color: black;
     min-width: 260px;
+    float: right;
 }
 
 .btn-black {
@@ -46,8 +57,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: white;
+    color: black;
 }
 
 .text-black {
@@ -56,6 +67,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.fa-gem {
+    font-size: 65%;
 }
 
 /* -------------------------------- Media Queries */
