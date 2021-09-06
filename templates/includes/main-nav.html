@@ -17,10 +17,10 @@
                 Rings
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="rings-link">
-                <a href="" class="dropdown-item">Gold Rings</a>
-                <a href="" class="dropdown-item">Platinum Rings</a>
-                <a href="" class="dropdown-item">Silver Rings</a>
-                <a href="" class="dropdown-item">All Rings</a>
+                <a href="{% url 'products' %}?category=gold_rings" class="dropdown-item">Gold Rings</a>
+                <a href="{% url 'products' %}?category=platinum-rings" class="dropdown-item">Platinum Rings</a>
+                <a href="{% url 'products' %}?category=silver_rings" class="dropdown-item">Silver Rings</a>
+                <a href="{% url 'products' %}?category=gold_rings,platinum-rings,silver_rings" class="dropdown-item">All Rings</a>
             </div>
         </li>
 
