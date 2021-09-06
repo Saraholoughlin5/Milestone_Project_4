@@ -87,6 +87,16 @@ header {
     background: #000 !important;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #F9F3EE;
+	z-index: -1;
+}
+
 .banner-font {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
