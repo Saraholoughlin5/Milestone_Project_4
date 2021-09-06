@@ -1,0 +1,254 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind001",
+      "name": "Gold Ring 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.00,
+      "category": 1,
+      "rating": 3.2,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image1.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind002",
+      "name": "Gold Ring 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.01,
+      "category": 1,
+      "rating": 3.3,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image2.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind003",
+      "name": "Platinum Ring 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.02,
+      "category": 2,
+      "rating": 3.4,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image3.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind004",
+      "name": "Platinum Ring 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.03,
+      "category": 2,
+      "rating": 3.5,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image4.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind005",
+      "name": "Silver Ring 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.04,
+      "category": 3,
+      "rating": 3.6,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image5.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind006",
+      "name": "Silver Ring 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.05,
+      "category": 3,
+      "rating": 3.7,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image6.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind007",
+      "name": "Gold Necklace Set 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.06,
+      "category": 4,
+      "rating": 3.8,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image7.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind008",
+      "name": "Gold Necklace Set 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.07,
+      "category": 4,
+      "rating": 3.9,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image8.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind009",
+      "name": "Platinum Necklace Set 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.08,
+      "category": 5,
+      "rating": 4.0,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image9.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind010",
+      "name": "Platinum Necklace Set 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.09,
+      "category": 5,
+      "rating": 4.1,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image10.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind011",
+      "name": "Silver Necklace Set 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.10,
+      "category": 6,
+      "rating": 4.2,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image11.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind012",
+      "name": "Silver Necklace Set 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.11,
+      "category": 6,
+      "rating": 4.3,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image12.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind013",
+      "name": "Clearance Set 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.12,
+      "category": 7,
+      "rating": 4.4,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image13.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind014",
+      "name": "Clearance Set 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.13,
+      "category": 7,
+      "rating": 4.5,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image14.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind015",
+      "name": "Clearance Set 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.14,
+      "category": 7,
+      "rating": 4.6,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image15.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind016",
+      "name": "30% Off Deal 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.15,
+      "category": 8,
+      "rating": 4.7,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image16.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind017",
+      "name": "30% Off Deal 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.16,
+      "category": 8,
+      "rating": 4.8,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image17.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "ind018",
+      "name": "30% Off Deal 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 100.17,
+      "category": 8,
+      "rating": 4.9,
+      "image_url": "https://events.rhema.org/wp-content/uploads/2018/08/WOF_Article_CWH818-846x508.jpg",
+      "image": "image18.jpg"
+    }
+  }
+]

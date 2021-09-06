@@ -1,0 +1,66 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "gold_rings",
+      "friendly_name": "Gold Rings"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "platinum-rings",
+      "friendly_name": "Platinum Rings"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "silver_rings",
+      "friendly_name": "Silver Rings"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "gold_necklace_sets",
+      "friendly_name": "Gold Necklace Sets"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "platinum_necklace_sets",
+      "friendly_name": "Platinum Necklace Sets"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "silver_necklace_sets",
+      "friendly_name": "Silver Necklace Sets"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "clearance_items",
+      "friendly_name": "Clearance Items"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "30_percent_off",
+      "friendly_name": "Limited Time 30% Off"
+    }
+  } 
+]
