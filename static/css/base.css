@@ -31,6 +31,10 @@ header {
     text-shadow: 2px 2px 4px #CFB997;
 }
 
+.navbar-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -68,6 +72,15 @@ header {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.banner-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
 }
 
 .fa-gem {
