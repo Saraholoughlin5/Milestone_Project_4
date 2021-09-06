@@ -26,17 +26,26 @@ header {
 .logo-font {
     text-transform: none;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-family: 'WindSong', sans-serif;
     text-shadow: 2px 2px 4px #CFB997;
 }
 
 .navbar-font {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+}
+
+.navbar-nav li{
+	margin:0 40px;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+.search-field {
+    margin-left: 40px;
 }
 
 .home-text {
@@ -84,7 +93,7 @@ header {
 }
 
 .fa-gem {
-    font-size: 65%;
+    font-size: 55%;
 }
 
 /* -------------------------------- Media Queries */
