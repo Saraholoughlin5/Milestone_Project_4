@@ -14,7 +14,7 @@ header {
     background-color: #F9F3EE;
 }
 
-/* from Bulma */
+/* icon class from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -26,8 +26,9 @@ header {
 .logo-font {
     text-transform: none;
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'WindSong', sans-serif;
+    text-shadow: 2px 2px 4px #CFB997;
 }
 
 .main-logo-link {
