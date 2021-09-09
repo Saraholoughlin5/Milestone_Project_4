@@ -63,6 +63,11 @@ header {
     text-shadow: #222;
 }
 
+hr {
+    clear: both;
+    visibility: hidden;
+}
+
 .shop-now-button {
     background: #F9F3EE;
     color: black;
@@ -114,6 +119,10 @@ a.category-badge {
 }
 
 a.category-badge > span.badge:hover {
+    transform: scale(1.1);
+}
+
+a.keep-btn:hover {
     transform: scale(1.1);
 }
 
