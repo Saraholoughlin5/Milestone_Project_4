@@ -113,6 +113,12 @@ hr {
 }
 
 .overlay-2 {
+    width: 80%;
+    background: #F9F3EE;
+    z-index: -1;
+}
+
+.overlay-3 {
     height: 100%;
     width: 80%;
     background: #F9F3EE;
