@@ -108,8 +108,15 @@ hr {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #F9F3EE;
-	z-index: -1;
+	background: rgba(255,255,255,.1);
+	z-index: -2;
+}
+
+.overlay-2 {
+    height: 100%;
+    width: 80%;
+    background: #F9F3EE;
+    z-index: -1;
 }
 
 a.category-badge {
