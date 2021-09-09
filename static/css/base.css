@@ -44,6 +44,16 @@ header {
     width: fit-content;
 }
 
+.banner-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.fa-gem {
+    font-size: 55%;
+}
+
 .search-field {
     margin-left: 40px;
 }
@@ -107,14 +117,17 @@ a.category-badge > span.badge:hover {
     transform: scale(1.1);
 }
 
-.banner-font {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 900;
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
 }
 
-.fa-gem {
-    font-size: 55%;
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
