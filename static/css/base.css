@@ -113,6 +113,7 @@ hr {
 }
 
 .overlay-2 {
+    min-height: 100%;
     width: 80%;
     background: #F9F3EE;
     z-index: -1;
@@ -146,6 +147,8 @@ a.keep-btn:hover {
     bottom: 10px;
     right: 10px;
     font-size: 2rem;
+    background-color: #F9F3EE; 
+    border-radius: 5px 20px 5px;
 }
 
 .btt-link {
