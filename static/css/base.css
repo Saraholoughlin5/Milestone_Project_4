@@ -100,8 +100,8 @@ hr {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: white;
     color: black;
+    transform: scale(1.1);
 }
 
 .text-black {
