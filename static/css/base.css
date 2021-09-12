@@ -170,7 +170,9 @@ a.keep-btn:hover {
     border-radius: 5px 20px 5px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
