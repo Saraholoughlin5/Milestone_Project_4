@@ -1,5 +1,5 @@
 <div class="collapse navbar-collapse w-auto" id="main-nav">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
             <a class="navbar-font nav-link text-black" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,4 +59,18 @@
             <a class="nav-link text-black navbar-font" href="">Blog</a>
         </li>
     </ul>
+    <div class="col-12 col-lg-2 ml-auto py-lg-0">
+        <form method="GET" action="{% url 'products' %}" class="">
+            <div class="input-group w-100">
+                <input class="search-field form-control border-bottom" type="text" name="q" placeholder="Search">
+                <div class="input-group-append">
+                    <button class="form-control btn" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

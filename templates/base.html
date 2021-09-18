@@ -19,7 +19,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -50,27 +50,14 @@
   <body>
 
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex border-bottom border-black">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
               <a href="{% url 'home' %}" class="nav-link main-logo-link">
                   <h2 class="logo-font text-black my-0">Indulgem <i class="far fa-gem"></i></h2>
               </a>
           </div>
-          <div class="col-12 col-lg-2 my-auto ml-auto py-1 py-lg-0">
-              <form method="GET" action="{% url 'products' %}" class="">
-                  <div class="input-group w-100">
-                      <input class="search-field form-control border rounded" type="text" name="q" placeholder="Search">
-                      <div class="input-group-append">
-                          <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                              <span class="icon">
-                                  <i class="fas fa-search"></i>
-                              </span>
-                          </button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="col-12 col-lg-6 mr-auto py-1 py-lg-0">
+          
+          <div class="col-12 col-lg-8 mr-auto py-1 py-lg-0">
               <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                   <li class="list-inline-item dropdown">
                       <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -120,7 +107,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="banner-font my-1">Free delivery when you spend over €{{ free_delivery_threshold }}!</h4>                
+                <h4 class="banner-font my-1">Free delivery when you spend over €{{ free_delivery_threshold }}</h4>                
             </div>            
         </div>
   </header>
