@@ -15,6 +15,11 @@ header {
     background-color: #F9F3EE;
 }
 
+.main-font {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
 /* icon class from Bulma */
 .icon {
     align-items: center;
@@ -162,11 +167,11 @@ a.category-badge > span.badge:hover {
     transform: scale(1.1);
 }
 
-a.keep-btn {
+a.white-btn {
     background-color: white !important;
 }
 
-a.keep-btn:hover {
+a.white-btn:hover {
     transform: scale(1.1);
     color: black !important;
 }

@@ -4,12 +4,12 @@
 
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
-{% block content %}
-    <h1>{% trans "E-mail Addresses" %}</h1>
+{% block inner_content %}
+<h2 class="logo-font text-black mb-5 mt-4 text-center">{% trans "E-mail Addresses" %}</h2>
 {% if user.emailaddress_set.all %}
-<p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
+<p class="main-font">{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
-<form action="{% url 'account_email' %}" class="email_list" method="post">
+<form action="{% url 'account_email' %}" class="email_list shadow px-3 py-3 bg-white" method="post">
 {% csrf_token %}
 <fieldset class="blockLabels">
 
@@ -31,9 +31,9 @@
   {% endfor %}
 
 <div class="buttonHolder">
-      <button class="secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <button class="secondaryAction main-font" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+      <button class="secondaryAction main-font" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <button class="primaryAction main-font" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
 </fieldset>
@@ -47,10 +47,10 @@
 
     <h2>{% trans "Add E-mail Address" %}</h2>
 
-    <form method="post" action="{% url 'account_email' %}" class="add_email">
+    <form method="post" action="{% url 'account_email' %}" class="add_email shadow px-3 py-3 bg-white">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+        {{ form|crispy }}
+        <button name="action_add" type="submit" class="white-btn btn btn-black rounded main-font mt-3">{% trans "Add E-mail" %}</button>
     </form>
 
 {% endblock %}
