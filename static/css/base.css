@@ -266,6 +266,17 @@ a.white-btn:hover {
     overflow-y: auto;
 }
 
+/* Allauth form formatting */
+
+.allauth-form-inner-content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+}
+
+#signup_form {
+    width: 400px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
