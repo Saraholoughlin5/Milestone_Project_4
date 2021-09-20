@@ -39,8 +39,15 @@ header {
 
 .navbar-font {
     font-family: 'Raleway', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
+}
+
+.navbar-font:hover,
+.navbar-font:active,
+.navbar-font:focus {
+    text-shadow: 0 1px 2px #CFB997;
+
 }
 
 ul {
@@ -110,7 +117,7 @@ hr {
 .shop-now-button:active,
 .shop-now-button:focus {
     color:  black;
-    transform: scale(1.1);
+    text-shadow: 0 1px 2px rgb(51, 49, 49);
 }
 
 .btn-black:hover,

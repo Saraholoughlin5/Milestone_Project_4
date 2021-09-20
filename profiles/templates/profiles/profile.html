@@ -67,7 +67,13 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="white-btn btn btn-black rounded float-right mt-2">Update</button>
+                    <a href="{% url 'products' %}" class="keep-btn btn btn-outline-black rounded">
+                        <span class="icon">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="main-text">Keep Shopping</span>
+                    </a>
+                    <button class="white-btn btn btn-black rounded">Update</button>
                 </form>
             </div>
         </div>

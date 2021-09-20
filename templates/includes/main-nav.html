@@ -1,11 +1,11 @@
 <div class="collapse navbar-collapse w-auto" id="main-nav">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-            <a class="navbar-font nav-link text-black" href="#" id="all-products-link"
+            <a class="navbar-font nav-link text-black rounded" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0 rounded" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -14,11 +14,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="navbar-font nav-link text-black" href="#" id="rings-link"
+            <a class="navbar-font nav-link text-black rounded" href="#" id="rings-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Rings
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="rings-link">
+            <div class="dropdown-menu border-0 rounded" aria-labelledby="rings-link">
                 <a href="{% url 'products' %}?category=gold_rings" class="dropdown-item">Gold Rings</a>
                 <a href="{% url 'products' %}?category=platinum_rings" class="dropdown-item">Platinum Rings</a>
                 <a href="{% url 'products' %}?category=silver_rings" class="dropdown-item">Silver Rings</a>
@@ -28,11 +28,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="navbar-font nav-link text-black" href="#" id="necklace-sets-link"
+            <a class="navbar-font nav-link text-black rounded" href="#" id="necklace-sets-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Necklace Sets
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="necklace-sets-link">
+            <div class="dropdown-menu border-0 rounded" aria-labelledby="necklace-sets-link">
                 <a href="{% url 'products' %}?category=gold_necklace_sets" class="dropdown-item">Gold Necklace Sets</a>
                 <a href="{% url 'products' %}?category=platinum_necklace_sets" class="dropdown-item">Platinum Necklace
                     Sets</a>
@@ -44,11 +44,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="navbar-font nav-link text-black" href="#" id="offers-link" data-toggle="dropdown"
+            <a class="navbar-font nav-link text-black rounded" href="#" id="offers-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Offers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="offers-link">
+            <div class="dropdown-menu border-0 rounded" aria-labelledby="offers-link">
                 <a href="{% url 'products' %}?category=clearance_items" class="dropdown-item">Clearance Items</a>
                 <a href="{% url 'products' %}?category=30_percent_off" class="dropdown-item">Limited Time 30% Off</a>
                 <a href="{% url 'products' %}?category=clearance_items,30_percent_off" class="dropdown-item">All
@@ -56,7 +56,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-black navbar-font" href="">Blog</a>
+            <a class="nav-link navbar-font text-black rounded" href="">Blog</a>
         </li>
     </ul>
     <div class="col-12 col-lg-2 ml-auto py-lg-0">

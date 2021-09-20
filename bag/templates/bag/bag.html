@@ -57,19 +57,19 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            <button class="decrement-qty btn btn-sm btn-black border rounded" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
+                                        <input class="form-control form-control-sm border qty_input" type="number"
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty btn btn-sm btn-black border rounded"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -93,11 +93,11 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-1 text-right">
-                            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h6><strong>Bag Total:</strong> €{{ total|floatformat:2 }}</h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            <h5 class="mt-4 text-info"><strong>Grand Total:</strong> €{{ grand_total|floatformat:2 }}</h5>
                             {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
+                            <p class="mb-1 text-danger small">
                                 Get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
                                 more.
                             </p>
