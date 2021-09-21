@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container overlay-3">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="logo-font text-center text-black mt-4 mb-5">Product Management</h2>
+            </div>
+        </div>
+
+        <div class="row col-10 shadow px-3 py-3 bg-white offset-md-1 mt-3">
+            <div class="col-12">
+                <h5 class="text-center text-black mt-4 mb-5">Edit a Product</h5>
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn btn-outline-black rounded" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black rounded border" type="submit">Update Product</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
