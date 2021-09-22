@@ -139,6 +139,12 @@ hr {
     background: #000 !important;
 }
 
+.modal-trigger:hover,
+.modal-trigger:active,
+.modal-trigger:focus {
+    cursor: pointer;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
