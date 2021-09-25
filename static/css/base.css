@@ -101,6 +101,10 @@ hr {
     visibility: hidden;
 }
 
+.card-img-top {
+    max-height: 200px;
+}
+
 .shop-now-button {
     background: #f0ded2;
     color: white;
