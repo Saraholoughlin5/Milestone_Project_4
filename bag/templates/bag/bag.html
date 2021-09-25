@@ -14,14 +14,14 @@
 <div class="overlay"></div>
 <div class="container-fluid overlay-3">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-2">
             <hr class="hidden">
             <h2 class="heading-font text-black mb-4">Shopping Bag</h2>
             <hr>
         </div>
     </div>
 
-    <div class="row col-10 shadow px-3 py-3 bg-white offset-md-1">
+    <div class="row col-10 shadow px-3 py-3 bg-white offset-md-1 mb-5">
         <div class="col text-center mt-5 px-5">
             {% if bag_items %}
             <div class="table-responsive rounded">
@@ -110,7 +110,7 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="keep-btn btn border rounded shadow">
+                            <a href="{% url 'products' %}" class="white-btn btn border rounded shadow">
                                 <span class="icon">
                                     <i class="fas fa-arrow-left"></i>
                                 </span>
@@ -129,10 +129,7 @@
             {% else %}
             <p class="lead navbar-font mb-5">Your bag is empty!</p>
             <a href="{% url 'products' %}" class="white-btn btn rounded border shadow mb-4">
-                <span class="icon">
-                    <i class="fas fa-arrow-left"></i>
-                </span>
-                <span class="lead navbar-font">Keep Shopping</span>
+                <span><i class="fas fa-arrow-left"></i> Keep Shopping</span>
             </a>
             {% endif %}
         </div>

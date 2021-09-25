@@ -92,7 +92,7 @@
             <form id="comment-form" method="POST" action="{% url 'blog_detail' blog_post.id %}">
                 {% csrf_token %}
                 {{ comment_form|crispy }}
-                <button class="button btn bg-white border shadow rounded mb-5" type="submit"><strong>Add
+                <button class="white-btn btn border shadow rounded mb-5" type="submit"><strong>Add
                         Comment</strong></button>
             </form>
             {% endif %}

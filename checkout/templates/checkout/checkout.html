@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="row col-10 shadow px-3 py-3 bg-white offset-md-1 mt-3">
+        <div class="row col-10 shadow px-1 py-3 bg-white offset-md-1 mt-3">
             <div class="col-12 col-lg-6 mb-5 px-5">
                 <p class="main-text mt-2"><strong>Order Summary ({{ product_count }})</strong></p>
                 <div class="row border-bottom mb-2">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 px-5">
+            <div class="col-12 col-lg-6 px-2">
                 <p class="main-font px-2 mt-2"><strong>Complete your order</strong></p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
@@ -105,7 +105,7 @@
 							{% endif %}
 						</div>
                     </fieldset>
-                    <fieldset class="px-3">
+                    <fieldset class="px-1">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3 shadow border-0" id="card-element"></div>
@@ -115,7 +115,7 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded">
+						<a href="{% url 'view_bag' %}" class="btn white-btn shadow border rounded">
 							<span class="icon">
 								<i class="fas fa-arrow-left"></i>
 							</span>
