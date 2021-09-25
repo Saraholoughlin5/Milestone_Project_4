@@ -19,7 +19,7 @@
             <h2 class="heading-font mb-5 mt-3">{{ blog_post.title }}</h2>
         </div>
     </div>
-
+    <!-- Picture and Article -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 mb-5">
             <div class="card shadow mb-4">
@@ -54,9 +54,7 @@
             </div>
         </div>
     </div>
-
     <!-- Comments -->
-
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2 mb-4">
             <span><strong>COMMENTS</strong></span>
@@ -74,13 +72,13 @@
                 <div class="card-body">
                     <div>{{ comment.comment | linebreaks }}</div>
                     {% if request.user.is_superuser %}
-                    <a href="{% url 'delete_comment' comment.id %}" class="delete-link error-text">Delete</a>
+                    <div class="text-right"><a href="{% url 'delete_comment' comment.id %}" class="text-danger small text-right">Delete</a></div>
                     {% endif %}
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
     <!-- Comment Form -->
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2">
