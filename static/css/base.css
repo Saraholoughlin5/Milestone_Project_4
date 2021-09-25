@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #f6c799;
+    background-color: #f3dcc5;
 }
 
 .banner {
@@ -55,6 +55,10 @@ header {
 
 }
 
+.heading-font {
+    font-family: 'Lily Script One', cursive;
+}
+
 ul {
     padding-inline-start: 0;
 }
@@ -93,7 +97,7 @@ hr {
 }
 
 .shop-now-button {
-    background: #f6c799;
+    background: #f3dcc5;
     color: white;
     text-shadow: 0 2px 2px rgb(26, 22, 22);
     min-width: 260px;
@@ -165,14 +169,16 @@ hr {
 .overlay-2 {
     min-height: 100%;
     width: 80%;
-    background: #f6c799;
+    background: #f3dcc5;
     z-index: -1;
 }
 
 .overlay-3 {
     min-height: 100%;
     width: 80%;
-    background: #f6c799;
+    top: 0;
+    bottom: 0;
+    background: #f3dcc5;
     z-index: -1;
 }
 
@@ -203,7 +209,7 @@ a.white-btn:hover {
     bottom: 10px;
     right: 10px;
     font-size: 2rem;
-    background-color: #f6c799; 
+    background-color: #f3dcc5; 
     border-radius: 5px 20px 5px;
 }
 
