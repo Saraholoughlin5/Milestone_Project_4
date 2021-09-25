@@ -64,6 +64,10 @@ ul {
     padding-inline-start: 0;
 }
 
+.navbar {
+    max-height: 3.5rem;
+}
+
 .navbar-nav li {
 	margin: 0 20px 0 0;
     text-align: left;
@@ -374,5 +378,6 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .navbar {
         background-color: #f0ded2;
+        max-height: fit-content;
     }
 }
