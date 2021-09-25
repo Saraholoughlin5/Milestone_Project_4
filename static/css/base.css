@@ -12,7 +12,12 @@ body {
 }
 
 header {
-    background-color: #F9F3EE;
+    background-color: #f6c799;
+}
+
+.banner {
+    background: url('/media/glitter.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .main-font {
@@ -88,9 +93,11 @@ hr {
 }
 
 .shop-now-button {
-    background: #F9F3EE;
-    color: black;
+    background: #f6c799;
+    color: white;
+    text-shadow: 0 2px 2px rgb(26, 22, 22);
     min-width: 260px;
+    font-size: larger;
     float: right;
 }
 
@@ -158,14 +165,14 @@ hr {
 .overlay-2 {
     min-height: 100%;
     width: 80%;
-    background: #F9F3EE;
+    background: #f6c799;
     z-index: -1;
 }
 
 .overlay-3 {
     min-height: 100%;
     width: 80%;
-    background: #F9F3EE;
+    background: #f6c799;
     z-index: -1;
 }
 
@@ -196,7 +203,7 @@ a.white-btn:hover {
     bottom: 10px;
     right: 10px;
     font-size: 2rem;
-    background-color: #F9F3EE; 
+    background-color: #f6c799; 
     border-radius: 5px 20px 5px;
 }
 
