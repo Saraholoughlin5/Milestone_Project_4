@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="header-container container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid overlay-3">
+    <div class="row">
+        <!-- Page Heading -->
+        <div class="col text-center mt-3">
+            <h2 class="logo-font mb-5 mt-3">{{ blog_post.title }}</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 mb-5">
+            <div class="card shadow mb-4">
+                <div class="col text-center">
+                    <div class="text-center">
+                        {% if blog_post.image %}
+                        <a href="{{ blog_post.image.url }}" target="_blank" rel="noopener">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-responsive">
+                        </a>
+                        {% else %}
+                        <a href="{{ MEDIA_URL }}noimage.png" target="_blank" rel="noopener">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-responsive">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="container-fluid">
+                        <div class="mt-5 mb-5 text-justify">{{ blog_post.body_text | linebreaks }}</div>
+                        <p class="mt-4 small border-top text-right">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
+                        <!-- Edit and delete blog links -->
+                        {% if request.user.is_superuser %}
+                        <div class="small mb-5 text-right">
+                            <a href="{% url 'edit_blog' blog_post.id %}" class="text-info">Edit</a>
+                            <span> | </span>
+                            <a href="{% url 'delete_blog_post' blog_post.id %}" class="text-danger">Delete</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 mb-4">
+            <span><strong>COMMENTS</strong></span>
+            <span class="text-info small">Number of comments: <strong>{{ comments.count }}</strong></span>
+        </div>
+    </div>
+    <div class="row">
+        {% for comment in comments %}
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="card mb-5">
+            <div class="card-header bg-dark text-white">
+                <span><strong>{{ comment.user }}'s Comment</strong></span>
+                <span class="small">{{ comment.created_on }}</span>
+            </div>
+            <div class="card-body">
+                <div>{{ comment.comment | linebreaks }}</div>
+                {% if request.user.is_superuser %}
+                <a href="{% url 'delete_comment' comment.id %}" class="delete-link error-text">Delete</a>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    <!-- Comment Form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                {% if request.user.is_anonymous %}
+                <p class="text-danger">Please
+                    <a class="info-text p-text" href="{% url 'account_login' %}"> Login </a> or
+                    <a class="info-text p-text" href="{% url 'account_signup' %}">Signup</a>
+                    to add a comment.</p>
+                {% else %}
+                <form id="comment-form" method="POST" action="{% url 'blog_detail' blog_post.id %}">
+                    {% csrf_token %}
+                    {{ comment_form|crispy }}
+                    <button class="button btn bg-white border shadow rounded mb-5" type="submit"><strong>Add Comment</strong></button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back to top button -->
+<div class="btt-button">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-alt-circle-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- Javascript for back to top button -->
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+{% endblock %}

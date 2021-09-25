@@ -5,7 +5,7 @@ from .models import BlogPost, BlogComment
 from .forms import BlogCommentForm, BlogForm
 
 
-# All blog posts view
+# All Blog Posts View
 def all_blog_posts(request):
     """
     A view to show the blog page
@@ -22,7 +22,7 @@ def all_blog_posts(request):
     return render(request, template, context)
 
 
-# Blog detail view
+# Blog Detail View
 def blog_detail(request, blog_post_id):
     """
     A view to show individual blog post, comments
@@ -59,8 +59,8 @@ def blog_detail(request, blog_post_id):
     return render(request, template, context)
 
 
-# Blog Admin:
-# Add blog
+# Blog Administration
+# Add a Blog
 @login_required
 def add_blog_post(request):
     """
@@ -74,11 +74,11 @@ def add_blog_post(request):
                 blog_post = form.save(commit=False)
                 blog_post.user = request.user
                 blog_post.save()
-                messages.info(request, 'Blog added successfully!')
+                messages.info(request, 'Blog added successfully.')
                 return redirect(reverse('blog_detail', args=[blog_post.id]))
             else:
                 messages.error(request, 'Please check the form for errors. \
-                    Blog failed to add.')
+                    Failed to add blog.')
         else:
             form = BlogForm()
     else:
