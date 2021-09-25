@@ -5,9 +5,9 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
-<h2 class="logo-font text-black mb-5 mt-4 text-center">{% trans "Sign Up" %}</h2>
+<h2 class="heading-font mb-5 mt-4 text-center">{% trans "Sign Up" %}</h2>
 
-<p class="main-font">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="text-center">{% blocktrans %}Already have an account? Please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <form class="signup shadow px-3 py-3 mb-5 bg-white" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
@@ -16,7 +16,7 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <a class="white-btn btn shadow rounded mb-3" href="{% url 'home' %}">Home</a>
-  <button type="submit" class="white-btn btn btn-black rounded main-font mb-3">{% trans "Sign Up" %}</button>
+  <button type="submit" class="btn btn-black rounded mb-3">{% trans "Sign Up" %}</button>
 </form>
 
 {% endblock %}
