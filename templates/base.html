@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
-    {% block extra_meta %}
+    {% block extra_meta %}    
+    <link rel="icon"href="{% static 'favicon.ico' %}">
     {% endblock %}
 
     {% block corecss %}
@@ -110,7 +111,7 @@
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
+            <div class="col bg-brown text-white">
                 <h4 class="banner-font my-1"><strong>Free delivery when you spend over
                         €{{ free_delivery_threshold }}</strong></h4>
             </div>

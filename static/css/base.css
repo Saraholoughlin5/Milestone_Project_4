@@ -121,9 +121,9 @@ hr {
 }
 
 .btn-black {
-    background: black;
+    background: rgb(32, 26, 8);
     color: white;
-    border: 1px solid black;
+    border: 1px solid rgb(32, 26, 8);
 }
 
 .btn-outline-black {
@@ -137,6 +137,10 @@ hr {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+}
+
+.bg-brown {
+    background-color: rgb(32, 26, 8);
 }
 
 .shop-now-button:hover,
