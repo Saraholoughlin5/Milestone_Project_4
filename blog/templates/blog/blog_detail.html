@@ -27,11 +27,11 @@
                     <div class="text-center">
                         {% if blog_post.image %}
                         <a href="{{ blog_post.image.url }}" target="_blank" rel="noopener">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-responsive">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="mx-auto img-responsive">
                         </a>
                         {% else %}
                         <a href="{{ MEDIA_URL }}noimage.png" target="_blank" rel="noopener">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-responsive">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="mx-auto img-responsive">
                         </a>
                         {% endif %}
                     </div>
