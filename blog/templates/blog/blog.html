@@ -16,7 +16,7 @@
         <!-- Page Heading -->
         <div class="col text-center mt-3">
             <h2 class="heading-font mb-5 mt-3">Blog</h2>
-            <p class="mb-5">We hope that you enjoy our blog, which aims to inform you on the latest trends, styles and ethical updates.<br>Please feel free to comment (user profile required).
+            <p class="mb-5">We hope that you enjoy our jewellery blog, which aims to inform you of current trends, tips and all things indulgent!<br>Please feel free to comment (user profile required).
             </p>
         </div>
     </div>
@@ -29,7 +29,7 @@
             <div class="card shadow mb-4">
                 <div class="row g-0">
                     <!-- Blog Details -->
-                    <div class="col-md-7">
+                    <div class="col-md-12 col-l-7">
                         <div class="card-body mx-3 my-3">
                             <h5 class="heading-font-smaller mb-4">{{ blog_post.title }}</h5>
                             <hr>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <!-- Blog Image -->
-                    <div class="col-md-4 mt-5 ml-3">
+                    <div class="col-md-6 col-sm-10 offset-sm-1 mx-auto mb-5 text-center">
                         {% if blog_post.image %}
                         <a href="{% url 'blog_detail' blog_post.id %}">
                             <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}"

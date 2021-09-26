@@ -24,14 +24,14 @@
         <div class="col-12 col-md-8 mb-5">
             <div class="card shadow mb-4">
                 <div class="col text-center">
-                    <div class="text-center">
+                    <div class="text-center mt-5">
                         {% if blog_post.image %}
                         <a href="{{ blog_post.image.url }}" target="_blank" rel="noopener">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="mx-auto img-responsive">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                         {% else %}
                         <a href="{{ MEDIA_URL }}noimage.png" target="_blank" rel="noopener">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="mx-auto img-responsive">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                         {% endif %}
                     </div>

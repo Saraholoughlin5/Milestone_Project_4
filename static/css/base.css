@@ -53,7 +53,6 @@ header {
 .navbar-font:active,
 .navbar-font:focus {
     text-shadow: 0 1px 2px #CFB997;
-
 }
 
 .heading-font {
@@ -97,9 +96,14 @@ ul {
     margin-left: 20px;
 }
 
-.home-text {
+.home-font {
+    font-family: 'WindSong', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    text-transform: none;
+    margin-top: 5rem;
     text-align: right;
-    text-shadow: #222;
+    text-shadow: 3px 3px 5px #000;
 }
 
 hr {
@@ -118,6 +122,10 @@ hr {
     min-width: 260px;
     font-size: larger;
     float: right;
+}
+
+.btn-file {
+    background-color: white !important;
 }
 
 .btn-black {
@@ -229,7 +237,7 @@ a.category-badge > span.badge:hover {
     right: 10px;
     font-size: 1.5rem;
     background-color: #fbf5e0; 
-    border-radius: 5px 5px 5px;
+    border-radius: 5px 20px 5px;
 }
 
 .btt-link,
