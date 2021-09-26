@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Adapted from Boutique Ado project-->
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,11 +12,13 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container-fluid overlay-3">
     <div class="row">
-        
         <div class="col-12 col-md-12 col-lg-6 offset-lg-1 mt-4">
+            <!-- Product Image -->
             <div class="image-container my-5 mx-4 rounded border-0 shadow">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -27,6 +31,7 @@
                 {% endif %}
             </div>
         </div>
+        <!-- Product Details -->
         <div class="col-12 col-md-6 col-lg-4 mt-4">
             <div class="card p-4 mt-4 mb-5 shadow">
                 <h4 class="mb-2 heading-font-smaller">{{ product.name }}</h4>
@@ -69,12 +74,14 @@
                 </div>
                 <!-- Modal Structure End -->
                 {% endif %}
+                <!-- Single Colour Overlay -->
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         {% with product.has_sizes as s %}
                         {% if s %}
+                        <!-- Size Selector - Where Applicable -->
                         <div class="col-12">
                             <p><strong>Size:</strong></p>
                             <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
@@ -84,6 +91,7 @@
                             </select>
                         </div>
                         {% endif %}
+                        <!-- Quantity Selector -->
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
@@ -109,7 +117,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Product Detial Buttons -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="white-btn btn shadow-sm rounded mt-2">
                                 <span class="icon">
@@ -132,5 +140,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Javascript Source For Subtotal Calculation -->
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

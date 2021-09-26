@@ -1,3 +1,4 @@
+/* General */
 html {
     height: 100%;
 }
@@ -16,14 +17,18 @@ header {
     max-height: fit-content;
 }
 
+/* Banner */
 .banner {
     background: url('/media/banner.png');
     background-size: cover;
 }
 
-.main-font {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+.main-logo-link {
+    width: fit-content;
+}
+
+.fa-gem {
+    font-size: 55%;
 }
 
 /* icon class from Bulma */
@@ -33,6 +38,12 @@ header {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+/* Fonts */
+.main-font {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
 }
 
 .logo-font {
@@ -55,6 +66,12 @@ header {
     text-shadow: 0 1px 2px #CFB997;
 }
 
+.banner-font {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 .heading-font {
     font-family: 'Playball', cursive;
     font-size: 3rem;
@@ -63,37 +80,6 @@ header {
 .heading-font-smaller {
     font-family: 'Playball', cursive;
     font-size: 2rem;
-}
-
-ul {
-    padding-inline-start: 0;
-}
-
-.navbar {
-    max-height: 3.5rem;
-}
-
-.navbar-nav li {
-	margin: 0 20px 0 0;
-    text-align: left;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.banner-font {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-}
-
-.fa-gem {
-    font-size: 55%;
-}
-
-.search-field {
-    margin-left: 20px;
 }
 
 .home-font {
@@ -106,15 +92,48 @@ ul {
     text-shadow: 3px 3px 5px #000;
 }
 
+/* Navbar */
+.navbar {
+    max-height: 3.5rem;
+}
+
+.navbar-nav li {
+	margin: 0 20px 0 0;
+    text-align: left;
+}
+
+.search-field {
+    margin-left: 20px;
+}
+
+/* Formatting */
 hr {
     clear: both;
     visibility: hidden;
 }
 
+ul {
+    padding-inline-start: 0;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+/* Card */
 .card-img-top {
     max-height: 200px;
 }
 
+/* Buttons */
 .shop-now-button {
     background: #fbf5e0;
     color: white;
@@ -165,24 +184,23 @@ hr {
     transform: scale(1.1);
 }
 
-.text-black {
-    color: #000 !important;
+.white-btn {
+    background-color: white !important;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.white-btn:hover {
+    transform: scale(1.1);
+    color: black !important;
 }
 
-.bg-black {
-    background: #000 !important;
-}
-
+/* Modal */
 .modal-trigger:hover,
 .modal-trigger:active,
 .modal-trigger:focus {
     cursor: pointer;
 }
 
+/* Overlays */
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -209,6 +227,7 @@ hr {
     z-index: -1;
 }
 
+/* Badge */
 a.category-badge {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -220,15 +239,7 @@ a.category-badge > span.badge:hover {
     transform: scale(1.1);
 }
 
-.white-btn {
-    background-color: white !important;
-}
-
-.white-btn:hover {
-    transform: scale(1.1);
-    color: black !important;
-}
-
+/* Back To Top Button*/
 .btt-button {
     height: 30px;
     width: 30px;
@@ -246,11 +257,12 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Input Formatting */
 input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* Toast Formatting */
 
 .message-container {
     position: fixed;
@@ -272,7 +284,7 @@ input[name='q']::placeholder {
     font-weight: 300;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* From CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -284,7 +296,7 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
+/* Convenience Classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -317,14 +329,14 @@ input[name='q']::placeholder {
     border-bottom-color: #343a40 !important;
 }
 
+/* Wrapper */
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* Allauth form formatting */
-
+/* Allauth Form Formatting */
 .allauth-form-inner-content {
     font-family: 'Raleway', sans-serif;
     font-size: 0.9rem;
@@ -335,7 +347,6 @@ input[name='q']::placeholder {
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -362,7 +373,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -386,7 +397,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* Pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -397,6 +408,7 @@ input[name='q']::placeholder {
     }
 }
 
+/* Navbar background colour instead of image for on mobile*/
 @media (max-width: 991px) {
     .navbar {
         background-color: #f0ded2;

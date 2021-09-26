@@ -14,6 +14,8 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+# Adapted from Boutique Ado project
+
 
 @require_POST
 def cache_checkout_data(request):

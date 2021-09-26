@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Adapted from Boutique Ado project
 
 
 def index(request):

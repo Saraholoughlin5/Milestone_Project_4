@@ -1,5 +1,7 @@
 from django.db import models
 
+# Adapted from Boutique Ado project
+
 
 class Category(models.Model):
 

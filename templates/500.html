@@ -10,8 +10,11 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container-fluid overlay-3">
+    <!-- Page Heading -->
     <div class="row">
         <div class="col text-center mt-2">
             <hr class="hidden">
@@ -19,7 +22,7 @@
             <hr>
         </div>
     </div>
-
+    <!-- 500 Error Text Background -->
     <div class="row col-10 shadow px-3 py-3 bg-white offset-md-1 mb-5">
         <div class="col text-center mt-5 px-5"><p class="lead navbar-font mb-5">Internal server error - please try again later.</p>
             <a href="{% url 'home' %}" class="white-btn btn rounded border shadow mb-4">

@@ -1,6 +1,8 @@
 from django import forms
 from .models import UserProfile
 
+# Adapted from Boutique Ado project
+
 
 class UserProfileForm(forms.ModelForm):
     class Meta:

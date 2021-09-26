@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
+# Adapted from Boutique Ado project
 
 
 class ProductAdmin(admin.ModelAdmin):

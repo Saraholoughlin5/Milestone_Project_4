@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- Adapted from Boutique Ado project-->
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -14,9 +16,12 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container overlay-3">
     <div class="row">
+        <!-- Page Heading -->
         <div class="col">
             <hr>
             <h2 class="heading-font mb-4 text-center text-black">Thank You!</h2>
@@ -25,7 +30,7 @@
                 <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
-
+    <!-- Order Details -->
     <div class="row justify-content-center">
         <div class="col-12 col-lg-9">
             <div class="order-confirmation-wrapper p-2 border-0 bg-white shadow">
@@ -192,6 +197,7 @@
             </div>
         </div>
     </div>
+    <!-- Buttons -->
     <div class="row">
         <div class="col-12 col-lg-12 text-center py-3">
             {% if from_profile %}

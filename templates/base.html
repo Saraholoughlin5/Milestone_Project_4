@@ -1,3 +1,4 @@
+<!-- Adapted from Boutique Ado project-->
 {% load static %}
 
 <!doctype html>
@@ -6,16 +7,17 @@
 <head>
 
     {% block meta %}
+    <!-- Meta Tags -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}    
-    <link rel="icon"href="{% static 'favicon.ico' %}">
     {% endblock %}
 
     {% block corecss %}
+    <!-- Main Stylesheet, Bootstrap Stylesheet, Google Fonts Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
@@ -25,9 +27,12 @@
     {% endblock %}
 
     {% block extra_css %}
+    <!-- Favicon -->
+    <link rel="icon"href="{% static 'favicon.ico' %}">
     {% endblock %}
 
     {% block corejs %}
+    <!-- Fontawesome, JQuery, Popper and Bootstrap JS -->
     <script src="https://kit.fontawesome.com/696537e239.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -44,6 +49,7 @@
     {% block extra_js %}
     {% endblock %}
 
+    <!-- Head Title -->
     <title>Indulgem {% block extra_title %}{% endblock %}</title>
 </head>
 
@@ -51,12 +57,13 @@
 
     <header class="container-fluid fixed-top banner">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+            <!-- Logo Text and Icon -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">Indulgem <i class="far fa-gem"></i></h2>
                 </a>
             </div>
-
+            <!-- Dropdown Menu -->
             <div class="col-12 col-lg-8 mr-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -82,6 +89,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
+                        <!-- Shopping Bag -->
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
@@ -101,6 +109,7 @@
             </div>
         </div>
         <div class="row">
+            <!-- Toggle Button -->
             <nav class="navbar navbar-expand-lg py-auto navbar-light w-100">
                 <button class="navbar-toggler shadow bg-white" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,6 +119,7 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
+        <!-- Delivery Threshold Banner -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-brown text-white">
                 <h4 class="banner-font my-1"><strong>Free delivery when you spend over
@@ -119,6 +129,7 @@
     </header>
 
     {% if messages %}
+    <!-- Toasts -->
     <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
@@ -143,6 +154,7 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <!-- Toast JS -->
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>

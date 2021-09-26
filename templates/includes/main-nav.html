@@ -1,5 +1,7 @@
+<!-- Adapted from Boutique Ado project-->
 <div class="collapse navbar-collapse w-auto" id="main-nav">
     <ul class="navbar-nav mr-auto">
+        <!-- Navbar Dropdown -->
         <li class="nav-item dropdown">
             <a class="navbar-font nav-link text-black rounded" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -12,7 +14,6 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="navbar-font nav-link text-black rounded" href="#" id="rings-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,7 +27,6 @@
                     Rings</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="navbar-font nav-link text-black rounded" href="#" id="necklace-sets-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,7 +42,6 @@
                     class="dropdown-item">All Necklace Sets</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="navbar-font nav-link text-black rounded" href="#" id="offers-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -60,6 +59,7 @@
         </li>
     </ul>
     <div class="col-12 col-lg-2 ml-auto">
+        <!-- Search Field and Icon Button -->
         <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="search-field form-control border rounded border-bottom" type="text" name="q" placeholder="Search">

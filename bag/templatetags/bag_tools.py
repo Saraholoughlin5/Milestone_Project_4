@@ -1,4 +1,5 @@
 from django import template
+# Adapted from Boutique Ado project
 
 
 register = template.Library()

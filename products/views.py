@@ -7,7 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
+# Adapted from Boutique Ado project
 
 
 def all_products(request):

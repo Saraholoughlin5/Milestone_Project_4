@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Adapted from Boutique Ado project-->
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,24 +12,30 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container-fluid overlay-2">
     <div class="row">
         <div class="col text-center mt-3">
+            <!-- Page Heading -->
             <h2 class="heading-font mb-2 mt-3">Jewellery</h2>
+            <!-- Categories -->
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span
                     class="p-2 mt-2 badge white-btn badge-white text-black rounded border shadow-sm">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
-            <hr class="w-50 mb-1">
+            <hr>
         </div>
     </div>
+    <!-- Product Information -->
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <!-- Sort By Selector -->
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
                             class="custom-select custom-select-sm rounded shadow-sm border-{% if current_sorting != 'None_None' %}info{% else %}none{% endif %}">
@@ -52,6 +60,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Search Results -->
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -65,6 +74,7 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <!-- Product Image and Details -->
                     <div class="card h-100 border-0 shadow">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
@@ -148,7 +158,8 @@
         </div>
     </div>
 </div>
-<div class="btt-button">
+<!-- Back to Top Button -->
+<div class="btt-button d-none">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-alt-circle-up text-black mx-auto my-auto"></i>
     </a>
@@ -161,6 +172,14 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
+    
+    $(document).scroll(function(){
+            if ($(this).scrollTop() >= 200) {
+                $('.btt-button').removeClass('d-none');
+            } else {
+                $('.btt-button').addClass('d-none');
+            }
+        });
 </script>
 
 <script type="text/javascript">
