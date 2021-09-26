@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+# Adapted from Boutique Ado project
 
 def bag_contents(request):
 

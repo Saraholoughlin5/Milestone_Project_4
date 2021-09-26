@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="header-container container">
     <div class="row">
@@ -12,7 +12,9 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container-fluid overlay-3">
     <!-- Page Heading -->
     <div class="row">
@@ -21,7 +23,7 @@
         </div>
     </div>
 
-
+    <!-- Edit Blog Form Background -->
     <div class="row col-10 shadow px-3 py-3 bg-white offset-1 mt-3">
         <div class="col-12 col-md-8 offset-md-2">
             <h4 class="text-center my-5"><strong>Edit Blog</strong></h4>
@@ -42,7 +44,7 @@
                         <a href="{% url 'blog' %}" class="btn button bg-white rounded shadow border">
                             <span class="text-danger"><strong>Cancel</strong></span>
                         </a>
-                        <!-- Submit Button -->
+                        <!-- Update Blog Button -->
                         <button id="submit-button" class="btn btn-black text-white button rounded shadow border">
                             <span><strong>Update Blog</strong></span>
                         </button>
@@ -56,7 +58,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<!-- Javascript for changing the image -->
+<!-- Javascript To Change the Image -->
 <script>
     $('#id_image').change(function () {
         let file = $('#id_image')[0].files[0];

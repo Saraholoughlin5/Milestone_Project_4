@@ -5,6 +5,7 @@ from .models import BlogPost, BlogComment
 from .forms import BlogCommentForm, BlogForm
 
 
+# Adapted from Boutique Ado project
 # All Blog Posts View
 def all_blog_posts(request):
     """

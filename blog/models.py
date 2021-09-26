@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+# Adapted from Boutique Ado project
 # Blog post model
 class BlogPost(models.Model):
     """

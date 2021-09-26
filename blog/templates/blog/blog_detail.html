@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="header-container container">
     <div class="row">
@@ -11,6 +12,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
 <div class="container-fluid overlay-3">
     <!-- Page Heading -->
@@ -19,7 +21,7 @@
             <h2 class="heading-font mb-5 mt-3">{{ blog_post.title }}</h2>
         </div>
     </div>
-    <!-- Picture and Article -->
+    <!-- Blog Text and Image -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 mb-5">
             <div class="card shadow mb-4">
@@ -54,7 +56,7 @@
             </div>
         </div>
     </div>
-    <!-- Comments -->
+    <!-- Blog Comments -->
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2 mb-4">
             <span><strong>COMMENTS</strong></span>
@@ -80,7 +82,7 @@
         </div>
         {% endfor %}
     </div>
-    <!-- Comment Form -->
+    <!-- Blog Comment Form -->
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2">
             {% if request.user.is_anonymous %}
@@ -99,7 +101,7 @@
         </div>
     </div>
 </div>
-<!-- Back to top button -->
+<!-- Back To Top Button -->
 <div class="btt-button">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-alt-circle-up text-black mx-auto my-auto"></i>
@@ -109,7 +111,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<!-- Javascript for back to top button -->
+<!-- Javascript For Back To Top Button -->
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)

@@ -2,6 +2,8 @@ from django import forms
 from products.widgets import CustomClearableFileInput
 from .models import BlogComment, BlogPost
 
+# Adapted from Boutique Ado project
+
 
 class BlogCommentForm(forms.ModelForm):
     """

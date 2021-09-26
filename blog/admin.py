@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import BlogPost, BlogComment
 
+# Adapted from Boutique Ado project
+
 
 class BlogPostAdmin(admin.ModelAdmin):
     """

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Empty Page Header -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,25 +11,28 @@
 {% endblock %}
 
 {% block content %}
+<!-- Opaque Background Overlay -->
 <div class="overlay"></div>
+<!-- Single Colour Overlay -->
 <div class="container-fluid overlay-2">
     <div class="row">
-        <!-- Page Heading -->
+        <!-- Page Heading and Description -->
         <div class="col text-center mt-3">
             <h2 class="heading-font mb-5 mt-3">Blog</h2>
-            <p class="mb-5">We hope that you enjoy our jewellery blog, which aims to inform you of current trends, tips and all things indulgent!<br>Please feel free to comment (user profile required).
+            <p class="mb-5">We hope that you enjoy our jewellery blog, which aims to inform you of current trends, tips
+                and all things indulgent!<br>Please feel free to comment (user profile required).
             </p>
         </div>
     </div>
 
-    <!-- Blog Posts -->
+    <!-- Blog Posts - Abbreviated -->
     <div class="row justify-content-center">
         {% for blog_post in blog_posts %}
         <div class="col-12 col-md-10 mb-5">
-            <!-- Bootstrap Card -->
+            <!-- Blog Details Card -->
             <div class="card shadow mb-4">
                 <div class="row g-0">
-                    <!-- Blog Details -->
+                    <!-- Blog Title, Text and Info -->
                     <div class="col-md-12 col-l-7">
                         <div class="card-body mx-3 my-3">
                             <h5 class="heading-font-smaller mb-4">{{ blog_post.title }}</h5>
@@ -36,22 +40,22 @@
                             <p class="mb-4">{{ blog_post.body_text|slice:":220" }}...</p>
                             <hr>
                             <div class="blog-detail-wrapper">
-                                <!-- Edit and delete blog links -->
+                                <!-- Edit/Delete Links -->
                                 {% if request.user.is_superuser %}
                                 <div class="small border-top">
                                     <a href="{% url 'edit_blog' blog_post.id %}" class="text-info">Edit</a>
                                     <span> | </span>
-                                    <a href="{% url 'delete_blog_post' blog_post.id %}"
-                                        class="text-danger">Delete</a>
+                                    <a href="{% url 'delete_blog_post' blog_post.id %}" class="text-danger">Delete</a>
                                 </div>
                                 {% endif %}
-                                <!-- Blog author and date -->
+                                <!-- Blog Creator and Date -->
                                 <p class="small text-muted">{{ blog_post.user }} |
                                     {{ blog_post.created_on}}</p>
                             </div>
-                            <!-- Read On button -->
+                            <!-- Read On Button -->
                             <div>
-                                <a href="{% url 'blog_detail' blog_post.id %}" class="white-btn btn border rounded shadow">Read
+                                <a href="{% url 'blog_detail' blog_post.id %}"
+                                    class="white-btn btn border rounded shadow">Read
                                     On</a>
                             </div>
                         </div>
@@ -60,13 +64,11 @@
                     <div class="col-md-6 col-sm-10 offset-sm-1 mx-auto mb-5 text-center">
                         {% if blog_post.image %}
                         <a href="{% url 'blog_detail' blog_post.id %}">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}"
-                                class="img-fluid">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                         {% else %}
                         <a href="{% url 'blog_detail' blog_post.id %}">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}"
-                                class="img-fluid">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                         {% endif %}
                     </div>
@@ -76,7 +78,7 @@
         {% endfor %}
     </div>
 </div>
-<!-- Back to top button -->
+<!-- Back To Top Button -->
 <div class="btt-button">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-alt-circle-up text-black mx-auto my-auto"></i>
@@ -86,7 +88,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<!-- Javascript for back to top button -->
+<!-- Javascript For Back to Top Button -->
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)

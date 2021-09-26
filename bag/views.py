@@ -3,7 +3,7 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
+# Adapted from Boutique Ado project
 
 
 def view_bag(request):
