@@ -413,10 +413,18 @@ input[name='q']::placeholder {
     }
 }
 
-/* Navbar background colour instead of image for on mobile*/
+/* Navbar background colour, delivery banner and quantity selector on mobile */
 @media (max-width: 991px) {
     .navbar {
         background-color: #f0ded2;
         max-height: fit-content;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
