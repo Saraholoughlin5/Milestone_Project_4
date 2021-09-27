@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}- Error 404{% endblock %}
+
 <!-- Adapted from Boutique Ado project-->
 <!-- Empty Page Header -->
 {% block page_header %}
@@ -20,7 +22,7 @@
     <div class="row">
         <div class="col text-center mt-2">
             <hr class="hidden">
-            <h2 class="heading-font text-black mb-4">404 Error</h2>
+            <h2 id="404" class="heading-font text-black mb-4">404 Error</h2>
             <hr>
         </div>
     </div>
