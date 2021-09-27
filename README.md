@@ -15,7 +15,7 @@
 3. [Responsivity](#responsivity)
 4. [Design](#design)
 	1. [Wireframes](#wireframes)
-	2. [Schema and Models](#schemamodels)
+	2. [Models](#models)
 	3. [Colour Palette](#palette)
 	4. [Images](#images)
 	5. [Typography](#typography)
@@ -55,3 +55,9 @@ GitHub Repository: https://github.com/Saraholoughlin5/Milestone_Project_4
 
 Heroku App: https://indulgem-mp4.herokuapp.com/
 
+### **Purpose and Value**<a name="purpose"></a>
+
+The purpose of the Indulgem app is to sell a range of jewellery and provide jewellery related info in the form of a blog.  
+Users can view the products and blog articles, but require a profile account to checkout and purchase items, or to comment on a blog.
+The Superuser can add, edit and delete products (images, price, description, rating), blogs and blog comments (CRUD objectives). Regular users can read only. 
+The site provides an easy to use purchasing service that the user can interact with (blog). 
