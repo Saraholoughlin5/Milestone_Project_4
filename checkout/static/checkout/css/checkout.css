@@ -47,6 +47,7 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+/* Confirm Order Spinner */
 #loading-overlay {
 	display: none;
 	position: fixed;
