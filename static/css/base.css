@@ -31,6 +31,10 @@ header {
     font-size: 55%;
 }
 
+.twitter-link a {
+    font-size: 1.6rem;
+}
+
 /* icon class from Bulma */
 .icon {
     align-items: center;
