@@ -4,10 +4,12 @@
 
 {% block head_title %}{% trans "Log Out" %}{% endblock %}
 
+<!-- Adapted from Boutique Ado project-->
+<!-- Log Out -->
 {% block inner_content %}
 <h2 class="heading-font mb-5 mt-4 text-center">{% trans "Log Out" %}</h2>
 
-<div class="row col-10 offset-md-1 shadow px-5 py-5 bg-white justify-content-center">
+<div class="row col-10 offset-1 shadow px-5 py-5 bg-white justify-content-center">
 <p class="text-center">{% trans 'Are you sure you want to log out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">

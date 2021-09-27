@@ -4,6 +4,8 @@
 
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
+<!-- Adapted from Boutique Ado project-->
+<!-- Email Address -->
 {% block inner_content %}
 <h2 class="heading-font mb-5 mt-4 text-center">{% trans "E-mail Addresses" %}</h2>
 {% if user.emailaddress_set.all %}
