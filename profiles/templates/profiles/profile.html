@@ -35,10 +35,10 @@
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr class="text-muted border-bottom">
-                                <th class="font-weight-normal small">Order Number</th>
+                                <th class="font-weight-normal small">Number</th>
                                 <th class="font-weight-normal small">Date</th>
                                 <th class="font-weight-normal small">Items</th>
-                                <th class="font-weight-normal small">Order Total</th>
+                                <th class="font-weight-normal small">Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,7 +47,7 @@
                                     <td class="small">
                                         <a href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:10 }}
+                                            {{ order.order_number|truncatechars:7 }}
                                         </a>
                                     </td>
                                     <td class="small">{{ order.date }}</td>
