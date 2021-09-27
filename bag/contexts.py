@@ -5,6 +5,7 @@ from products.models import Product
 
 # Adapted from Boutique Ado project
 
+
 def bag_contents(request):
 
     bag_items = []

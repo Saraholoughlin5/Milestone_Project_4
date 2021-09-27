@@ -163,3 +163,4 @@ def delete_comment(request, comment_id):
         return redirect(reverse('home'))
 
     return redirect('blog')
+    
