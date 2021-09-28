@@ -427,4 +427,16 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .big-table {
+        display: none;
+    }
+
+    .signup {
+        max-width: 230px;
+    }
+
+    .password_reset {
+        display: inline;
+    }
 }

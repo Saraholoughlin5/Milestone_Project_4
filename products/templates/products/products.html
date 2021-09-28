@@ -33,7 +33,7 @@
     <!-- Product Information -->
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2">
+            <div class="row mt-1 mb-1">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <!-- Sort By Selector -->
                     <div class="sort-select-wrapper w-50">
@@ -108,10 +108,12 @@
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger modal-trigger" data-toggle="modal" data-target="#{{ product.sku }}">Delete</a>
-                                        </small>
+                                        <p class="mt-2">
+                                            <small>
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                <a class="text-danger modal-trigger" data-toggle="modal" data-target="#{{ product.sku }}">Delete</a>
+                                            </small>
+                                        </p>
                                         <!-- Modal Structure Start -->
                                         <div class="modal fade" id="{{ product.sku }}" role="dialog">
                                             <div class="modal-dialog">

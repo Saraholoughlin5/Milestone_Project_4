@@ -10,4 +10,3 @@ class StaticStorage(S3Boto3Storage):
 # Cloud storage location for media files using AWS
 class MediaStorage(S3Boto3Storage):
     location = settings.MEDIAFILES_LOCATION
-    
