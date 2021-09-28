@@ -432,6 +432,10 @@ input[name='q']::placeholder {
         display: none;
     }
 
+    .big-checkout {
+        display: none;
+    }
+
     .signup {
         max-width: 230px;
     }

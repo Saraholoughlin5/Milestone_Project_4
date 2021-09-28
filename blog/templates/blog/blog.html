@@ -34,7 +34,7 @@
                 <div class="row g-0">
                     <!-- Blog Title, Text and Info -->
                     <div class="col-md-12 col-l-7">
-                        <div class="card-body mx-3 my-3">
+                        <div class="card-body mx-1 my-3">
                             <h5 class="heading-font-smaller mb-4">{{ blog_post.title }}</h5>
                             <hr>
                             <p class="mb-4">{{ blog_post.body_text|slice:":220" }}...</p>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <!-- Blog Image -->
-                    <div class="col-md-6 col-sm-10 offset-sm-1 mx-auto mb-5 text-center">
+                    <div class="col-md-6 col-sm-10 offset-sm-1 mb-5 mx-2 text-center">
                         {% if blog_post.image %}
                         <a href="{% url 'blog_detail' blog_post.id %}">
                             <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid">
