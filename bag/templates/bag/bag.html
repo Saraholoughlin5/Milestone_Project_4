@@ -33,7 +33,7 @@
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black border-bottom">
-                        <tr class=>
+                        <tr>
                             <th scope="col" class="small text-left">Image</th>
                             <th scope="col" class="small">Details</th>
                             <th scope="col" class="small">Price</th>
@@ -41,7 +41,6 @@
                             <th scope="col" class="small text-right">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in bag_items %}
                     <!-- Bag Item Image and Details -->
                     <tr>
@@ -152,7 +151,7 @@
         </div>
     </div>
 
-    <div class="row col-10 shadow px-1 my-0 bg-white d-lg-none offset-1 mb-5">
+    <div class="row col-10 shadow px-1 my-0 bg-white offset-1 d-lg-none mb-5">
         <div class="col text-center mt-5 px-2">
             {% if bag_items %}
             <!-- Bag Content Table -->
@@ -216,46 +215,44 @@
                 </div>
                 <div>
                     <!-- Subtotal -->
-                    <h5 class="mt-5 mb-2 pt-2 small">Subtotal:
+                    <h5 class="mt-5 mb-5 pt-2 small">Subtotal:
                         <strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></h5>
                 </div>
             </div>
             {% endfor %}
             <!-- Cost Details -->
-            <table class="d-lg-none text-center">
-                <tr>
-                    <td class="pt-1">
-                        <h6><strong>Bag Total:</strong> €{{ total|floatformat:2 }}</h6>
-                        <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                        <h5 class="mt-4 text-info"><strong>Grand Total:</strong> €{{ grand_total|floatformat:2 }}
-                        </h5>
+            <div class="col-12 d-lg-none">
+                    <div class="row">
+                        <p><strong>Bag Total:</strong> €{{ total|floatformat:2 }}</p>
+                    </div>
+                    <div class="row">
+                        <p><strong>Delivery:</strong> €{{ delivery|floatformat:2 }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="mt-1 text-info"><strong>Grand Total:</strong> €{{ grand_total|floatformat:2 }}
+                        </p>
                         {% if free_delivery_delta > 0 %}
                         <p class="mb-1 text-danger small">
                             Get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
                             more.
                         </p>
                         {% endif %}
-                    </td>
-                </tr>
-                <tr>
+                    </div>
                     <!-- Shopping Bag Buttons -->
-                    <td class="text-right">
+                    <div class="row">
                         <a href="{% url 'products' %}" class="white-btn btn border rounded shadow">
-                            <span class="icon">
-                                <i class="fas fa-arrow-left"></i>
-                            </span>
-                            <span class="main-text">Shop</span>
+                            
+                            <span class="small">Shop</span>
                         </a>
                         <a href="{% url 'checkout' %}" class="btn btn-black rounded px-1">
-                            <span class="main-text">Checkout</span>
+                            <span class="small">Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
                             </span>
                         </a>
-                    </td>
-                </tr>
+                    </div>
+            </div>
         </div>
-        </table>
     </div>
     {% else %}
     <!-- Empty Shopping Bag Text and Button -->
@@ -265,11 +262,7 @@
     </a>
     {% endif %}
 </div>
-</div>
 
-
-
-</div>
 {% endblock %}
 
 {% block postloadjs %}
