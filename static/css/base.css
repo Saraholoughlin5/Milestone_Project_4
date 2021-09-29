@@ -379,6 +379,14 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -443,5 +451,13 @@ input[name='q']::placeholder {
 
     .password_reset {
         display: inline;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
     }
 }
