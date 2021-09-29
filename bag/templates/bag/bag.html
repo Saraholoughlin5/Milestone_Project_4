@@ -28,14 +28,238 @@
     <div class="desktop">
         <div class="row col-10 shadow px-3 py-3 bg-white offset-1 mb-5">
             <div class="col text-center mt-5 px-5">
-                {% include 'bag/desktop_bag.html' %}
+                {% if bag_items %}
+<!-- Bag Content Table -->
+<div class="table-responsive rounded">
+    <table class="table table-sm table-borderless">
+        <thead class="text-black border-bottom">
+            <tr>
+                <th scope="col" class="small text-left">Image</th>
+                <th scope="col" class="small">Details</th>
+                <th scope="col" class="small">Price</th>
+                <th scope="col" class="small">Quantity</th>
+                <th scope="col" class="small text-right">Subtotal</th>
+            </tr>
+        </thead>
+        {% for item in bag_items %}
+        <!-- Bag Item Image and Details -->
+        <tr>
+            <td class="w-25">
+                {% if item.product.image %}
+                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                {% else %}
+                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                {% endif %}
+            </td>
+            <td class="py-3">
+                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                <p class="my-0"><strong>Size:
+                    </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                </p>
+                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+            </td>
+            <td class="py-3">
+                <p class="my-0">€{{ item.product.price }}</p>
+            </td>
+            <td class="py-1 w-25 px-1">
+                <!-- Shopping Bag Form -->
+                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <!-- Quantity Selector -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="decrement-qty btn btn-sm btn-black border rounded"
+                                    data-item_id="{{ item.item_id }}-mobile" id="decrement-qty_{{ item.item_id }}-mobile">
+                                    <span>
+                                        <i class="fas fa-minus fa-sm"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <input class="form-control form-control-sm border qty_input" type="number" name="quantity"
+                                value="{{ item.quantity }}" min="1" max="5" data-item_id="{{ item.item_id }}-mobile"
+                                id="id_qty_{{ item.item_id }}-mobile">
+                            <div class="input-group-append">
+                                <button class="increment-qty btn btn-sm btn-black border rounded"
+                                    data-item_id="{{ item.item_id }}-mobile" id="increment-qty_{{ item.item_id }}-mobile">
+                                    <span>
+                                        <i class="fas fa-plus fa-sm"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            {% if item.product.has_sizes %}
+                            <!-- Size Selector (not available for earrings in Clearance)-->
+                            <input type="hidden" name="product_size" value="{{ item.size }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                </form>
+                <!-- Update and Remove Links -->
+                <a class="update-link text-info float-left"><small>Update</small></a>
+                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                    data-product_size="{{ item.size }}"><small>Remove</small></a>
+            </td>
+            <!-- Item Price -->
+            <td class="py-3 text-right">
+                <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+            </td>
+        </tr>
+        {% endfor %}
+        <!-- Cost Details -->
+        <tr>
+            <td colspan="5" class="pt-1 text-right">
+                <h6><strong>Bag Total:</strong> €{{ total|floatformat:2 }}</h6>
+                <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                <h5 class="mt-4 text-info"><strong>Grand Total:</strong> €{{ grand_total|floatformat:2 }}
+                </h5>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger small">
+                    Get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
+                    more.
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <!-- Shopping Bag Buttons -->
+            <td colspan="5" class="text-right">
+                <a href="{% url 'products' %}" class="white-btn btn border rounded shadow">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span class="main-text">Keep Shopping</span>
+                </a>
+                <a href="{% url 'checkout' %}" class="btn btn-black rounded">
+                    <span class="main-text">Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+{% else %}
+<!-- Empty Shopping Bag Text and Button -->
+<p class="lead navbar-font mb-5">Your bag is empty!</p>
+<a href="{% url 'products' %}" class="white-btn btn rounded border shadow mb-4">
+    <span><i class="fas fa-arrow-left"></i> Keep Shopping</span>
+</a>
+{% endif %}
             </div>
         </div>
     </div>
     <div class="mobile">
         <div class="row col-10 shadow px-1 my-0 bg-white offset-1 mb-5">
             <div class="col text-center mt-5 px-2">
-                {% include 'bag/mobile_bag.html' %}
+                {% if bag_items %}
+<!-- Bag Content Table -->
+<div class="px-1">
+    <div>
+        {% for item in bag_items %}
+        <!-- Bag Item Image and Details -->
+        {% if item.product.image %}
+        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+        {% else %}
+        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+        {% endif %}
+        <div>
+            <h5 class="mt-4">Details</h5>
+            <p><strong>{{ item.product.name }}</strong></p>
+            <p class="my-0"><strong>Size:
+                </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+        </div>
+        <div>
+            <h5 class="mt-4">Price: <small>€{{ item.product.price }}</small></h5>
+        </div>
+        <div>
+            <h5 class="mt-4">Quantity</h5>
+            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <!-- Quantity Selector -->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="decrement-qty btn btn-sm btn-black border rounded"
+                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                <span>
+                                    <i class="fas fa-minus fa-sm"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <input class="form-control form-control-sm border qty_input" type="number" name="quantity"
+                            value="{{ item.quantity }}" min="1" max="5" data-item_id="{{ item.item_id }}"
+                            id="id_qty_{{ item.item_id }}">
+                        <div class="input-group-append">
+                            <button class="increment-qty btn btn-sm btn-black border rounded"
+                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                <span>
+                                    <i class="fas fa-plus fa-sm"></i>
+                                </span>
+                            </button>
+                        </div>
+                        {% if item.product.has_sizes %}
+                        <!-- Size Selector (not available for earrings in Clearance)-->
+                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </form>
+            <!-- Update and Remove Links -->
+            <a class="update-link text-info float-left"><small>Update</small></a>
+            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                data-product_size="{{ item.size }}"><small>Remove</small></a>
+        </div>
+        <div>
+            <!-- Subtotal -->
+            <h5 class="mt-5 mb-3 pt-2 small">Subtotal:
+                <strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></h5>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Cost Details -->
+    <table>
+        <tr>
+            <td class="pt-1 text-right">
+                <h6><strong>Bag Total:</strong> €{{ total|floatformat:2 }}</h6>
+                <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                <h5 class="mt-4 text-info"><strong>Grand Total:</strong> €{{ grand_total|floatformat:2 }}
+                </h5>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger small">
+                    Get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
+                    more.
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <!-- Shopping Bag Buttons -->
+            <td class="text-right">
+                <a href="{% url 'products' %}" class="white-btn btn border rounded shadow">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span class="main-text">Keep Shopping</span>
+                </a>
+                <a href="{% url 'checkout' %}" class="btn btn-black rounded">
+                    <span class="main-text">Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </table>
+    {% else %}
+    <!-- Empty Shopping Bag Text and Button -->
+    <p class="lead navbar-font mb-5">Your bag is empty!</p>
+    <a href="{% url 'products' %}" class="white-btn btn rounded border shadow mb-4">
+        <span><i class="fas fa-arrow-left"></i> Keep Shopping</span>
+    </a>
+    {% endif %}
+</div>
             </div>
         </div>
     </div>

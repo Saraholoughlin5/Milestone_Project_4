@@ -438,7 +438,7 @@ input[name='q']::placeholder {
     }
 
     .big-checkout {
-        visibility: hidden;
+        display: none;
     }
 
     .signup {
