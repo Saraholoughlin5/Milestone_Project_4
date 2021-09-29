@@ -380,7 +380,7 @@ input[name='q']::placeholder {
 }
 
 .mobile {
-    display: none;
+    visibility: hidden;
 }
 
 .desktop {
@@ -454,6 +454,6 @@ input[name='q']::placeholder {
     }
 
     .desktop {
-        display: none;
+        visibility: hidden;
     }
 }
