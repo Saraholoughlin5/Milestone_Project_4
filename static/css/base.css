@@ -437,12 +437,8 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
-    .big-table {
-        display: none;
-    }
-
     .big-checkout {
-        display: none;
+        visibility: hidden;
     }
 
     .signup {
