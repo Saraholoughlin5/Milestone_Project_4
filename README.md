@@ -15,10 +15,9 @@
 	11. ['Blog' page](#blog)
 	12. ['Blog Details' page](#blogdetails)
 	13. ['Edit Blog' page](#editblog)
-	14. 'Add Blog' pages](#myaccount)
+	14. ['Add Blog' pages](#myaccount)
 	15. ['Product Management' page](#pmanage)
 	16. ['Logout' page](#logout)
-
 3. [Responsivity](#responsivity)
 4. [Design](#design)
 	1. [Wireframes](#wireframes)
@@ -32,7 +31,7 @@
 	1. [Strategy Plane](#strategy)
 	2. [Scope Plane](#scope)
 	3. [Structure Plane](#structure)
-    	4. [Skeleton Plane](#skeleton)
+    4. [Skeleton Plane](#skeleton)
 	5. [Surface Plane](#surface)
 6. [User Stories](#userstories)
 	1. [Viewing and Navigation](#van)
@@ -41,9 +40,11 @@
 	4. [Purchasing and Checkout](#pac)
 	5. [Admin and Store Management](#adminsm)
 7. [Testing](#testing)
-    	1. [Manual User Testing](#usertesting)
-	2. [Defensive User Testing](#defensive)
-	3. [Bug Fixes](#bugfixes)
+    1. [Non-Admin User Testing](#usertesting)
+	2. [Admin User Testing](#admintesting)
+	3. [Defensive User Testing](#defensive)
+	4. [App Tests](#apptest)
+	5. [Bug Fixes](#bugfixes)
 8. [Validation](#validation)
 9. [Technologies](#technologies)
 	1. [Languages](#languages)
@@ -56,16 +57,13 @@
 	4. [Images](#imagesa)
 	5. [Text Content](#textcontent)  
 
- 
 
 # Indulgem Jewellery Store - Milestone Project 4
 
 GitHub Repository: https://github.com/Saraholoughlin5/Milestone_Project_4
-
 Heroku App: https://indulgem-mp4.herokuapp.com/
 
 ![alt Indulgem Homepage](static/img/design/homepage.PNG "Kooky Kids Homepage" )  
-
 
 ### **Purpose and Features**<a name="purpose"></a>
 For this milestone project I have built an e-commerce jewellery store. Features include easily navigated and sorted products, a blog, blog commenting, 
@@ -150,7 +148,46 @@ The Heroku deployed app was checked on a Lenovo ThinkPad, iPhone X and Huawei Me
 [Am I Responsive](http://ami.responsivedesign.is/) displays various site pages, including the homepage, log in page, all products and blog details pages.
 
 ![alt Responsive Design](media/readme/am_i_responsive_mp4.PNG "Responsive Design")  
+### **Design**<a name="design"></a>
 
+#### **Wireframes**<a name="wireframes"></a>
+The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq.com). These were the initial wireframes created at the start of the project, and the final views have evolved during creation of the app.  
+Online Link: https://share.balsamiq.com/c/wUTkyRkeqqndXtveXLfFyr.png
+![alt Wireframes](media/readme/wireframes_mp4.png "Wireframes")
+
+#### **Color Palette**<a name="palette"></a>
+The colours for the Indulgem app were chosen to create a luxurious and warm feel that reflects the beauty of the jewellery. 
+An online tool, [Image Colour Picker](https://www.imagecolorpicker.com/) was used to help extract colours from some of the images used on the site, including some product images and the banner background.
+The colour palette was prepared at [Coolers](https://www.coolors.com/) website:  
+
+![alt Colour Palette](media/readme/colour_palette_mp4.png "Colour Palette")  
+
+#### **Images**<a name="images"></a>
+The images on the site were sourced from Pexels (www.pexels.com) and Unsplash (www.unsplash.com). 
+[Font Awesome](https://fontawesome.com/) was used for the logo gem, bag, profile, twitter and secure checkout icons in the app (also used for various arrows on buttons). 
+Images are not skewed or pixelated.
+
+#### **Typography**<a name="typography"></a> 
+[Google Fonts](https://fonts.google.com/) were employed for the text on the app. 
+['WindSong'](https://fonts.google.com/specimen/WindSong?query=winds#standard-styles) font was used for the 'Indulgem' logo.
+['Playball'](https://fonts.google.com/specimen/Playball?query=playball) font was used for the page and modal headings throughout the app.
+['Raleway'](https://fonts.google.com/specimen/Raleway?query=Raleway) font was used for the main text throughout the app.
+
+#### **Current Features**<a name="current"></a>
+- The app contains a back-to-top button on the all products and blog pages (JS)
+- A search bar is present with error toast display if an empty search is performed
+- A 'Sort by'... selector is available on the 'All Products' page
+- A 'Quantity' selector with update/remove links
+- 'Edit' and 'Delete' links are present and functional for products/blog/blog comments if Admin/Superuser
+- Crispy forms are used throughout the app
+- Blog and blog comments (2 new models added to the app)
+- Stripe payments
+- 'Sign Up' and 'Log In' pages contain links to one another for ease of use for new users  
+
+#### **Future Features**<a name="future"></a>
+- 'Delete Blog?' modal 
+- Rating entry for regular users - currently only added by Admin when adding/editing a product
+- Live Twitter account for user interaction 
 
 ### **UX (User Experience)** <a name="userexperience"></a>
 
@@ -181,24 +218,24 @@ The colour scheme of the app was drawn heavily from the banner and background im
 #### **Viewing and Navigation**<a name="van"></a>
 As a Shopper I want to be able to:
 - View a list of products so that I can select some products to purchase
-- View individual product details so that I can identify the price, description, product rating, product image and available sizes (if available)
-- Quickly identify clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase
+- View individual product and services details so that I can identify the price, description, product rating, product image and available sizes
+-  Quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase
 - Easily view the total of my purchases at any time so that I can avoid spending too much
 As a Site User I want to be able to: 
-- View a blog, whether logged in or not so, that I can read about items that might interest me and inform my purchases
+- View a blog, whether logged in or not so that I can read about items that might interest me and inform my purchases
 - Add a comment to a blog so that I can take part in discussions or ask for advice
 #### **Registration and User Accounts**<a name="reg"></a>
 As a Site User I want to be able to: 
 - Easily register for an account so that I can have a personal account and be able to view my profile
 - Easily login or logout so that I can access my personal account information
-- Easily recover my password in case I forget it so that I can recover access to my account
-- Receive a verification email confirmation after registering so that I can confirm that my account registration was successful
-- Have a personalised user profile so that I can view my personal order history and order confirmations, and save my delivery information
+- Easily recover my password in case I forget it	so that I can recover access to my account
+- Receive an email confirmation after registering	so that I can verify that my account registration was successful
+- Have a personalised user profile so that I can view my personal order history and order confirmation, and save my payment information.
 #### **Sorting and Searching**<a name="sorts"></a>
 As a Shopper I want to be able to: 
 - Sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products
-- Sort a specific category of product so that I can find the best priced or best rated product in a specific category, or sort the products in that category by name
-- Sort multiple categories of products simultaneously so that I can find the best priced or best rated product across broad categories, such as "rings" or "necklace sets"
+- Sort a specific category of product so that I can find the best priced or bets rated product in a specific category, or sort the products in that category by name
+- Sort multiple categories of products simultaneously so that I can find the best priced or bets rated product across broad categories, such as "clothing" or "homeware"
 - Search for a product by name or description so that I can find a specific product I'd like to purchase
 - Easily see what I've searched for and the number of results so that I can quickly decide whether the product I want is available
 #### **Purchasing and Checkout**<a name="pac"></a>
@@ -209,13 +246,96 @@ As a Shopper I want to be able to:
 - Easily enter my payment information so that I can checkout quickly and with no hassle
 - Feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase
 - View an order confirmation after checkout so that I can verify that I havent made any mistakes
-- Receive an email confirmation after checking out so that I can keep the confirmation of what I have purchased for my records (also available in my profile)
+- Receive an email confirmation after checking out so that I can keep the confirmation of what I have purchased for my records
+- Make purchases if I have no profile so that I can buy from the store without requiring a user account
 #### **Admin and Store Management**<a name="adminsm"></a>
  As a Store Owner I want to be able to: 
 - Add a product so that I can add new items to my store
 - Edit/Update a product so that I can change product prices, descriptions, images and other product criteria
-- Delete a product so that I can remove items that are no longer available
-- Add a blog so that I can interest new site users and shoppers and build an audience
-- Edit/Update a blog so that I can rewrite, if necessary, or change an image
+- Delete a product so that I can remove items that are no longer for sale
+- Add a blog so that I can interest new site users and shoppers
+- Edit/Update a blog so that I can rewrite if necessary or change an image
 - Delete a blog or blog comment so that blogs can be replaced and comments are policed
 
+
+### **Testing**<a name="testing"></a>
+User testing was carried out throughout the project to ensure that the site operates as expected during creation, and when deployed. 
+Site navigation, links, buttons and forms were tested for correct functionality, along with various features (edit, delete, update, remove, checkout, sign up and more).
+App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.  
+Heroku App User Details are as follows:
+Username: maryq  Password: Shopping1!
+Admin: Details submitted with project
+The following tests were carried out on both desktop and mobile views.
+
+#### **Non-Admin User Testing**<a name="usertesting"></a>
+
+| Test Case               | Action             | Expected Result  | Result           | Status|
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |		
+| Open App (Heroku)| Click on 'Open App' button in Heroku| App homepage displayed| App homepage displayed|  Pass  |
+| Check 'Shop' button| Click on the 'Shop' button on the homepage| The 'All Products' page is displayed| The 'All Products' page is displayed|  Pass  |
+| Scroll on 'All Products'| Scroll down through the 'All Products' page| The products are displayed as expected| The products are displayed as expected|  Pass  |
+| Check the back-to-top button| Click on the back-to-top button| The user is returned to the top of the page| The user is returned to top of the page|  Pass  |
+| Check the sort selector| Click on the sort selector and choose option| The products are correctly displayed as per sort option chosen| The products are correctly displayed as per sort option chosen|  Pass  |
+| Check view product details| Click on a product image to view product details| The 'Product details' page is displayed for that product| The 'Product details' page is displayed for that product|  Pass  |
+| Change the product size if applicable| Click on the 'Size' dropdown menu and select a different size| Default size can be updated| Default size can be updated|  Pass  |
+| Change 'Quantity' with the plus and minus buttons| Click on the plus/minus buttons to change the quantity of the product| The quantity is updated| The quantity is updated|  Pass  |
+| Check 'Keep Shopping' button| Click on the 'Keep Shopping'  button| The user is returned to the 'All Products' page| The user is returned to the 'All Products' page|  Pass  |
+| Add the product(s) to the Shopping Bag| Click on the 'Add to Bag' button| A 'Success' toast is displayed| A 'Success' toast is displayed|  Pass  |
+| Go to Checkout button on toast| Click on the 'Go to Checkout' button on the success toast | The 'Checkout' page is displayed| The 'Checkout' page is displayed|  Pass  |
+| Check 'Order Summary'| Check that the Order Summary displays intended purchases| The summary is correct| The summary is correct|  Pass  |
+| Check 'Return To Bag' button| Click on the 'Return To Bag' button| The 'Shopping Bag' is displayed| The 'Shopping Bag' is displayed|  Pass  |
+| Check 'Secure Checkout' button| Click on the 'Secure Checkout' button| The 'Checkout' page is displayed| The 'Checkout' page is displayed|  Pass  |
+| Fill in the 'Complete Order' form| Populate fields (if info is saved from previous order, ensure details are correct| Fields can be populated, or display the correct details| Fields can be populated, or display the correct details|  Pass  |
+| Enter payment details| Enter test card details (i.e. card no. 4242 4242 4242 4242, plus any numbers to date and CVC| Payment details entered| Payment details entered|  Pass  |
+| Check the 'Pay Now' button| Click on the 'Pay Now' button| Order details and success toast displayed | Order details and success toast displayed|  Pass  |
+| Check empty bag| Add a product to the bag, click in bag and click on the remove link| 'Your bag is empty!' message displayed, with 'Keep Shopping' button| 'Your bag is empty!' message displayed, with 'Keep Shopping' button|  Pass  |
+| Check navigation menu items| Click on each menu option, and dropdown item| Each linked page displayed as expected| Each linked page displayed as expected|  Pass  |
+| View Sign up page| Click on 'Sign Up' in the 'My Account' icon menu| Sign up form displayed| Sign up form displayed|  Pass  |
+| Sign up| Sign up for a user profile account| Populate form, click 'Sign Up' button, verify email| Populate form, click 'Sign Up' button, verify email|  Pass  |
+| Log in| Click on 'Login' in the 'My Account' icon menu and enter username/password, click sign in button| Login success toast displayed, logged in| Login success toast displayed, logged in|  Pass  |
+| View 'My Profile' page| Click on 'Profile' in the 'My Account' icon menu| The order summary and default delivery sections are displayed, with 'Shop' and 'Update' buttons | The order summary and default delivery sections are displayed, with 'Shop' and 'Update' buttons|  Pass  |
+| Check blog page| Click on 'Blog' in the navigation menu| The blog page is displayed, summarised blogs are listed| The blog page is displayed, summarised blogs are listed|  Pass  |
+|Check blog details | Click on a summarised blog's 'Read On' button| The full blog is displayed, including author and date/time info| The full blog is displayed, including author and date/time info|  Pass  |
+| Add a comment| Log in to profile and add a blog comment by entering text and clicking on the 'Add Comment' button| Comment added| Comment added|  Pass  |
+| Check 'Search' field functionality| Click on the 'Search' field and enter a keyword, i.e. 'ring'| All products with 'ring' in the title are displayed| All products with 'ring' in the title are displayed|  Pass  |
+
+#### **Admin User Testing**<a name="admintesting"></a>
+
+| Test Case               | Action             | Expected Result  | Result           | Status|
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |		
+| Open App (Heroku)| Click on 'Open App' button in Heroku| App homepage displayed| App homepage displayed|  Pass  |
+| Log in as Admin/Superuser| Click on 'Login' in the 'My Account' icon menu and enter admin username/password, click sign in button| Login success toast displayed, logged in| Login success toast displayed, logged in|  Pass  |
+| Check 'Product Management'| Click 'Product Management' in the 'My Account' icon menu| 'Add Product' page displayed, as expected| 'Add Product' page displayed as expected|  Pass  |
+| Add a product| Populate the form and click on the 'Add Product' button (cancel discards)| Product added to 'All Products' page, success toast displayed| Product added to 'All Products' page, success toast displayed|  Pass  |
+| Edit a product | Click on the 'Edit' link for a product on the 'All Products' or 'Product Details' page| 'Edit Product' page displayed - edit and update works as expected| 'Edit Product' displayed - edit and update works as expected|  Pass  |
+| Delete a product| Click on the 'Delete' link for a product on the 'All Products' or 'Product Details' page| 'Delete Product?' modal displayed, 'Delete' button deletes the product| 'Delete Product?' modal displayed, 'Delete' button deletes the product|  Pass  |
+| View the 'Add blog' form| lick 'Product Management' in the 'My Account' icon menu| 'Add blog' page and form is displayed| Add blog' page and form is displayed|  Pass  |  
+| Add a blog| Populate the form and click on the 'Add Blog' button (cancel discards)| New blog is added to the blog page| New blog is added to the blog page|  Pass  |  
+|Edit a blog | Click on the 'Edit' link for a blog item on the 'Blog' or 'Blog Details' page| 'Edit Product' page displayed - edit and update works as expected| 'Edit Product' displayed - edit and update works as expected|  Pass  |
+| Delete a blog| Click on the 'Delete' link for a blog on the 'Blog' or 'Blog Details' page| Blog deleted instantly, as expected| Blog deleted instantly, as expected|  Pass  |  
+| Add a blog comment| In the 'Blog Details' page, add text in the 'Comments' box and click on the 'Add Comment' button| Comment is added| Comment is added|  Pass  |
+| Delete a blog comment| In the 'Blog Details' page, click on the 'Delete' link for the comment| Comment deleted, success toast displayed| Comment deleted, success toast displayed|  Pass  |
+
+#### **Defensive User Testing**<a name="defensive"></a>
+Defensive testing tests were ran as required throughout project creation. These included:
+
+- Add blog/product attempt while logged out by adding '/add_blog' or '/add_product' to the end of the browser URL for the app - 404 error page displayed
+- Edit blog/product while logged out by adding '/edit_blog' or '/edit_product' to the end of the browser URL for the app - 404 error page displayed
+- Django allauth files used to handle user sign up, login and more
+- Confirmation modal added to the delete link for products to prevent accidental removal (not added to blog as it is not as imperative; future update)
+- Config Variables stored in Heroku to ensure they are not publicly available (declared in main app settings.py file)
+
+#### **App Tests**<a name="apptest"></a>
+App tests were ran throughout project creation to verify that each feature worked as expected. These included: 
+- Sign Up, receiving verification email, clicking on the link to return to the site, logging in successfully
+- Login as Admin/Superuser and edit/delete products, blogs and blog comments
+- Add products/multiple products to bag, checkout, order placed, confirmation email received
+- Update product quantities using the plus/minus, and update/remove buttons and links in the product details and shopping bag pages
+- Add and check toast messages, i.e. when product is added (success) or being edited (alert), or an empty search is performed (error)
+- Test Stripe payments using test card 4242 4242 4242 4242 plus any numbers for the remaining info, order confirmed, confirmation email received
+- Check order created/succeeded Stripe events
+
+#### **Bug Fixes**<a name="bugfixes"></a>    
+The following bugs were discovered and fixed during project creation: 
+- Sign up and email receipt not working. Error caused by linter line fixes for the AUTH_PASSWORD_VALIDATORS in settings.py. Lines left as is to fix the error
+- Display for mobile not working as expected for 'Shopping Bag' and 'Checkout' views in the Heroku app only. Error caused by duplicated media query heading in base.css. Once removed, the display for these pages was fixed
