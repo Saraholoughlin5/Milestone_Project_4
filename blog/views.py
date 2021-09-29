@@ -5,7 +5,6 @@ from .models import BlogPost, BlogComment
 from .forms import BlogCommentForm, BlogForm
 
 
-# Adapted from Boutique Ado project
 # All Blog Posts View
 def all_blog_posts(request):
     """
@@ -163,4 +162,3 @@ def delete_comment(request, comment_id):
         return redirect(reverse('home'))
 
     return redirect('blog')
-    

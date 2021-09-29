@@ -2,8 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# Adapted from Boutique Ado project
-# Blog post model
+# Blog Post Model
 class BlogPost(models.Model):
     """
     A model for blog posts which includes the user who created it,
@@ -24,7 +23,7 @@ class BlogPost(models.Model):
         return self.title
 
 
-# Blog Comments model
+# Blog Comments Model
 class BlogComment(models.Model):
     """
     A model for blog comments on blog posts which includes the user who is
