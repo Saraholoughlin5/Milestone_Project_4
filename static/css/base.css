@@ -379,13 +379,6 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-.mobile {
-    display: none;
-}
-
-.desktop {
-    display: block;
-}
 
 /* Media Queries */
 
@@ -409,9 +402,18 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: block;
+    }
 }
 
 /* Pad the top a bit when navbar is collapsed on mobile */
+/* Navbar background colour, delivery banner and quantity selector on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -420,10 +422,7 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
-}
 
-/* Navbar background colour, delivery banner and quantity selector on mobile */
-@media (max-width: 991px) {
     .navbar {
         background-color: #f0ded2;
         max-height: fit-content;
