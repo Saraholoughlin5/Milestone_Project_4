@@ -85,7 +85,7 @@
         </div>
         <div class="col-12 mb-5 d-lg-none px-1">
             <p class="main-text mt-2"><strong>Order Summary ({{ product_count }})</strong></p>
-	    {% for item in bag_items %}
+            {% for item in bag_items %}
             <div class="row border-bottom mb-2">
                 <div class="col-10 offset-1 mt-3">
                     <a href="{% url 'product_detail' item.product.id %}">
@@ -98,10 +98,11 @@
                 </div>
                 <div class="col-12">
                     <p class="mb-1 mt-3 small text-muted">Item: <strong>{{ item.product.name }}</strong></h5>
-                    <p class="my-0 small">Size:
-                        {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                    <p class="mb-1 mt-0 text-muted small">Subtotal: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 small">Size:
+                            {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        <p class="mb-1 mt-0 text-muted small">Subtotal:
+                            €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}

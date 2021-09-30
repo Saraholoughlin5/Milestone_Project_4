@@ -374,9 +374,9 @@ The following bugs were discovered and fixed during project creation:
 - [Stripe](https://www.stripe.com/): Payment processing
 - [AWS](https://aws.amazon.com/): Hosts the site's static and media files
 - [W3C HTML validator](https://validator.w3.org/): Validate site html code
-- [W3C CSS validator](#https://jigsaw.w3.org/css-validator/): Validate site css code
-- [JSHint](#https://jshint.com/): Validate JavaScript code
-- [pep8](#https://pypi.org/project/pep8/): Validate python code
+- [W3C CSS validator](https://jigsaw.w3.org/css-validator/): Validate site css code
+- [JSHint](https://jshint.com/): Validate JavaScript code
+- [pep8](https://pypi.org/project/pep8/): Validate python code
 
 ### **Deployment**<a name="deployment"></a>
 
@@ -384,24 +384,24 @@ Deployment and version control for the app was carried out with GitHub and Herok
 
 #### Deploy to Heroku
 
-1. Go to [Heroku](#https://www.heroku.com) and create an account
+1. Go to [Heroku](https://www.heroku.com) and create an account
 2. Click on 'New' and 'Create App'. Name the app and choose the appropriate region
 3. Provide a new Postgres database by clicking in the 'Resources' tab and adding 'Heroku Postgres'
 4. In the Gitpod terminal, install dj_database_url and psycopg2 using the pip3 install command
-5. Freeze requirements by typing '''pip3 freeze > requirements''' in the terminal
+5. Freeze requirements by typing ```pip3 freeze > requirements``` in the terminal
 6. In the 'Indulgem' main app - settings.py file, import dj_database_url and replace the default configuration with a call to dj_database_url.parse, adding the database URL from config variables in Heroku
-7. Migrate using '''python3 manage.py migrate''' in the terminal
-8. Load the categories using '''python3 manage.py load data categories'''
-9. Load the products using '''python3 manage.py load data categories'''
-10. Create a superuser (admin) using '''python3 manage.py create superuser'''
+7. Migrate using ```python3 manage.py migrate``` in the terminal
+8. Load the categories using ```python3 manage.py load data categories```
+9. Load the products using ```python3 manage.py load data categories```
+10. Create a superuser (admin) using ```python3 manage.py create superuser```
 11. The app and database are set up on Heroku
 12. Add 'if' statement to DATABASES in settings.py to ensure that the Heroku version of the app connects to Postgres when defined, otherwise it connects to SQLite
-13. Install gunicorn using '''python3 install gunicorn''' and freeze requirements.txt
+13. Install gunicorn using ```python3 install gunicorn``` and freeze requirements.txt
 14. Create Procfile
-15. Temporarily disable collectstatic using '''heroku config:set DISABLE_COLLECTSTATIC=1 --app indulgem-mp4'''
+15. Temporarily disable collectstatic using ```heroku config:set DISABLE_COLLECTSTATIC=1 --app indulgem-mp4```
 16. Add the hostname of the app to ALLOWED_HOSTS in settings.py; add localhost also
 17. Add, commit and push the changes to GitHub
-18. After '''git push''', enter '''git push heroku main''' to deploy to Heroku (sans static files)
+18. After ```git push```, enter ```git push heroku main``` to deploy to Heroku (sans static files)
 19. To automatically deploy when changes are pushed to GitHub, click on the 'Deploy' tab for the app on the Heroku website
 20. Click on 'GitHub' in the 'Deployment method' section
 21. Enter and search for your GitHub name and the correct repository name in the 'Connect to GitHub' fields. Connect. Confirmed.
@@ -424,7 +424,7 @@ Deployment and version control for the app was carried out with GitHub and Herok
 38. Attach the policy to the newly created group
 39. Create user for the group ('Add User' on the 'Users' page). Enter a username and check the 'Programmatic Access' Access type tick-box. Click 'Next'. Add user to group
 40. Once the user is created, download the user's access key CSV file - store safely, as it is not accessible again
-41. In the Gitpod terminal, '''pip3 install boto3''' and '''pip3 install django-storages'''
+41. In the Gitpod terminal, ```pip3 install boto3``` and ```pip3 install django-storages```
 42. Freeze requirements again and add to INSTALLED APPS in settings.py
 43. Add an 'if' statement to USE_AWS in the environment to connect Django to S3
 44. Add AWS keys to Config Vars in Heroku and set USE_AWS to True. Remove DISABLE_COLLECTSTATIC variable

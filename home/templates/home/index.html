@@ -4,27 +4,28 @@
 <!-- Adapted from Boutique Ado project-->
 <!-- Empty Page Header -->
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <!-- Homepage Main Text and Button -->
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-md-12 col-sm-12 my-auto">
-                <h1 class="display-4 text-white home-font mr-4">
-                    go ahead... indulge
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded py-3 mr-3"><strong>Shop Now</strong></a>
-                    </h4>
-                </div>
+<!-- Homepage Main Text and Button -->
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-md-12 col-sm-12 my-auto">
+            <h1 class="display-4 text-white home-font mr-4">
+                go ahead... indulge
+            </h1>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded py-3 mr-3"><strong>Shop
+                            Now</strong></a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

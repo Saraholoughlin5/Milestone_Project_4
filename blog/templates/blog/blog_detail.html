@@ -116,13 +116,13 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
-    
-    $(document).scroll(function(){
-            if ($(this).scrollTop() >= 200) {
-                $('.btt-button').removeClass('d-none');
-            } else {
-                $('.btt-button').addClass('d-none');
-            }
-        });
+
+    $(document).scroll(function () {
+        if ($(this).scrollTop() >= 200) {
+            $('.btt-button').removeClass('d-none');
+        } else {
+            $('.btt-button').addClass('d-none');
+        }
+    });
 </script>
 {% endblock %}
