@@ -21,7 +21,7 @@
 3. [Responsivity](#responsivity)
 4. [Design](#design)
 	1. [Wireframes](#wireframes)
-	2. [Schema and Models](#schemamodels)
+	2. [Schema](#schema)
 	3. [Colour Palette](#palette)
 	4. [Images](#images)
 	5. [Typography](#typography)
@@ -31,7 +31,7 @@
 	1. [Strategy Plane](#strategy)
 	2. [Scope Plane](#scope)
 	3. [Structure Plane](#structure)
-    4. [Skeleton Plane](#skeleton)
+    	4. [Skeleton Plane](#skeleton)
 	5. [Surface Plane](#surface)
 6. [User Stories](#userstories)
 	1. [Viewing and Navigation](#van)
@@ -40,15 +40,13 @@
 	4. [Purchasing and Checkout](#pac)
 	5. [Admin and Store Management](#adminsm)
 7. [Testing](#testing)
-    1. [Non-Admin User Testing](#usertesting)
+    	1. [Non-Admin User Testing](#usertesting)
 	2. [Admin User Testing](#admintesting)
 	3. [Defensive User Testing](#defensive)
 	4. [App Tests](#apptest)
 	5. [Bug Fixes](#bugfixes)
 8. [Validation](#validation)
 9. [Technologies](#technologies)
-	1. [Languages](#languages)
-	2. [Frameworks and Libraries](#frameworks)
 10. [Deployment](#deployment)
 11. [Credit and Acknowledgements](#credits)
 	1. [Mentor](#mentor)
@@ -60,52 +58,54 @@
 
 # Indulgem Jewellery Store - Milestone Project 4
 
-GitHub Repository: https://github.com/Saraholoughlin5/Milestone_Project_4
-Heroku App: https://indulgem-mp4.herokuapp.com/
+- GitHub Repository: https://github.com/Saraholoughlin5/Milestone_Project_4
+- Heroku App: https://indulgem-mp4.herokuapp.com/
 
-![alt Indulgem Homepage](static/img/design/homepage.PNG "Kooky Kids Homepage" )  
+![alt Indulgem Homepage](media/readme/homepage.pnt) "Indulgem Homepage" )  
+Adapted from the Boutique Ado project, (Code Institute)
 
 ### **Purpose and Features**<a name="purpose"></a>
-For this milestone project I have built an e-commerce jewellery store. Features include easily navigated and sorted products, a blog, blog commenting, 
-Users can sign up, view their profile, view products, change product size where applicable and increase/decrease quiantity (max: 5), add items to the shopping bag, use Stripe payments, checkout, and receive confirmation emails. 
-The can also view the blog page, which displays a summary of all available blogs, and they can add comments if logged in to their profile.
-A back to top button has been included on the 'All Products', 'Blog' and 'Blog Details' pages.
-An Admin account can be used to add/edit/delete products. They can also add/edit/delete a blog, and add and delete comments.
-This fulfils the CRUD requirement, as users can create, read, edit and delete content, depending on their profile type.
+For this milestone project I have built an e-commerce jewellery store. Features include easily navigated and sorted products, a blog, blog commenting,  
+Users can sign up, view their profile, view products, change product size where applicable and increase/decrease quiantity (max: 5), add items to the shopping bag, use Stripe payments, checkout, and receive confirmation emails.  
+The can also view the blog page, which displays a summary of all available blogs, and they can add comments if logged in to their profile.  
+A back-to-top button has been included on the 'All Products', 'Blog' and 'Blog Details' pages.  
+An Admin account can be used to add/edit/delete products. They can also add/edit/delete a blog, and add and delete comments.  
+This fulfils the CRUD requirement, as users can create, read, edit and delete content, depending on their profile type.  
 
 ### **Site Pages and Menu**<a name="sitepgs"></a>
 
 #### **'Home' page**<a name="homepage"></a>
-The Indulgem homepage is accessible via the logo on desktop and via the dropdown navigation menu on smaller screens.
-The 'Home' page contains the navigation menu and a 'Shop Now' button, which links to the 'All Products' page.
+The Indulgem homepage is accessible via the logo on desktop and via the dropdown navigation menu on smaller screens.  
+The 'Home' page contains the navigation menu and a 'Shop Now' button, which links to the 'All Products' page.  
 #### **'Navigation Menu**<a name="navmenu"></a>
-The navigation menu on large screens contains the Indulgem logo (links to homepage), the 'My Account' and shopping bag icons/headings, a list of menu items and a search bar.
-On smaller screens, the logo is not present. A toggle button can be clicked on to reveal the menu items and search field. The 'My Account' and shopping bag icons/headings are displayed across from the toggle button.
-Clicking on a menu option (all screen sizes) displays further dropdowns where available.
+The navigation menu on large screens contains the Indulgem logo (links to homepage), the 'My Account' and shopping bag icons/headings, a list of menu items and a search bar.  
+On smaller screens, the logo is not present. A toggle button can be clicked on to reveal the menu items and search field. The 'My Account' and shopping bag icons/headings are displayed across from the toggle button.  
+Clicking on a menu option (all screen sizes) displays further dropdowns where available.  
 
 #### **'All Products' page**<a name="allproducts"></a>
-This page contains a list of all products, the total number of products, a 'Sort by...' menu and a back to top button (only visible once scrolled down a minimum of 200px).
-When logged in using the Admin account, 'Edit/Delete' links are displayed.
-A 'Delete Product?' modal has been added to the delete link, to ensure that products are not accidentally removed.
-The navigation menu lists products by category, and user choices are displayed on the 'All Products' page, e.g. 'All Rings'.
-#### **'Product Details' page**<a name="pdetails"></a>
-Once the user clicks on a product image on the 'All Products' page, they are redirected to the 'Product Details' page. This page contains an enlarged image of the product and a white card that displays the product details, including the title, description, cost, category, rating, size menu (if applicable), quantity input field, and 'Keep Shopping'/'Add to Bag' buttons. 
+This page contains a list of all products, the total number of products, a 'Sort by...' menu and a back to top button (only visible once scrolled down a minimum of 200px).  
+When logged in using the Admin account, 'Edit/Delete' links are displayed.  
+A 'Delete Product?' modal has been added to the delete link, to ensure that products are not accidentally removed.  
+The navigation menu lists products by category, and user choices are displayed on the 'All Products' page, e.g. 'All Rings'.  
 
+#### **'Product Details' page**<a name="pdetails"></a>
+Once the user clicks on a product image on the 'All Products' page, they are redirected to the 'Product Details' page. This page contains an enlarged image of the product and a white card that displays the product details, including the title, description, cost, category, rating, size menu (if applicable), quantity input field, and 'Keep Shopping'/'Add to Bag' buttons.  
 Users can change the size of some products and increase the quantity to a maximum of 5. Clicking on the 'Keep Shopping' button brings the user back to the 'All Products' page, and clicking 'Add to Bag' keeps the user on the 'Product Details' page, while displaying a success toast message and a button linked to the 'Checkout' page.
+
 #### **'Edit Product' page**<a name="edproduct"></a>
 The 'Edit Product' page is only accessible by an Admin user on the 'All Products' and 'Product Details' pages. The user can update all details of the product.
 
 #### **'Shopping Bag' page**<a name="bag"></a>
-The 'Shopping Bag' page can be accessed via the bag icon in the navigation menu, or via a 'Return To Bag' button on the 'Checkout' page. If empty, a message and a 'Keep Shopping' button is displayed. If populated, the product image, details, price, quantity and subtotal are displayed, along with the bag total, delivery cost and grand total. 
-If the user has not exceeded the free delivery threshold, a message will be displayed to notify them.
+The 'Shopping Bag' page can be accessed via the bag icon in the navigation menu, or via a 'Return To Bag' button on the 'Checkout' page. If empty, a message and a 'Keep Shopping' button is displayed. If populated, the product image, details, price, quantity and subtotal are displayed, along with the bag total, delivery cost and grand total.  
+If the user has not exceeded the free delivery threshold, a message will be displayed to notify them.  
 'Keep Shopping' and 'Secure Checkout' buttons are present also.
 
 #### **'Checkout' page**<a name="checkout"></a>
-The Checkout page contains the 'Order Summary' and 'Complete Order' form, as well as a card payment field (Stripe) and two buttons ('Return to Bag' and 'Pay Now').
+The Checkout page contains the 'Order Summary' and 'Complete Order' form, as well as a card payment field (Stripe) and two buttons ('Return to Bag' and 'Pay Now').  
 If not signed in, links to login or sign up are displayed. Alert text highlighting the total charge is present beneath the buttons.
 
 #### **'Sign Up' page**<a name="signup"></a>
-The sign up page can be found in the 'My Account' navigation menu item. It contains a sign up form, as well as a link to log in, a 'Home' button, and a 'Sign Up' button.
+The sign up page can be found in the 'My Account' navigation menu item. It contains a sign up form, as well as a link to log in, a 'Home' button, and a 'Sign Up' button.  
 A link to this page is also available on the checkout page, and at the bottom of the 'Blog Details' page.
 
 #### **'Log In' page**<a name="login"></a>
@@ -116,18 +116,18 @@ Once a user is logged in they can view their profile page, which contains their 
 
 #### **'Blog' page**<a name="blog"></a>
 The 'Blog' page displays a panel list of summarised blogs. Each blog panel includes a title, summarised description, image and a 'Read On' button to access the 'Blog Details' page. 
-The username and date/time submission information is also displayed. 
-If logged in as Admin, 'Edit' and 'Delete' links are present - NOTE: there is no modal linked to the blog delete link (future feature).
+The username and date/time submission information is also displayed.  
+If logged in as Admin, 'Edit' and 'Delete' links are present - NOTE: there is no modal linked to the blog delete link (future feature).  
 The back-to-top button is also present on this page, visible once scroll threshold is reached.
 The blog can be read without logging in.
 
 #### **'Blog Details' page**<a name="blogdetails"></a>
-The 'Blog Details' page is accessible via the 'Read On' button on the 'Blog' page. The page includes the title, image and full description, as well as the username and date/time submission information. 
-A 'Comments' box is featured beneath the blog panel if comments have been added. The user, date/time and comment are displayed, as well as the total number of comments for the blog.
+The 'Blog Details' page is accessible via the 'Read On' button on the 'Blog' page. The page includes the title, image and full description, as well as the username and date/time submission information.  
+A 'Comments' box is featured beneath the blog panel if comments have been added. The user, date/time and comment are displayed, as well as the total number of comments for the blog.  
 'Login' and 'Signup' links are present if the user is logged out and wishes to add a comment.
 
 #### **'Edit Blog' page**<a name="editblog"></a>
-The 'Edit Blog' link is available on the 'Blog' and 'Blog Details' page, and only for an Admin user. A form is displayed for the Admin user to edit the title, description, and replace or remove the image as required. A 'Cancel' button is present if edits need to be discarded. An 'Update Blog' button is also present.
+The 'Edit Blog' link is available on the 'Blog' and 'Blog Details' page, and only for an Admin user. A form is displayed for the Admin user to edit the title, description, and replace or remove the image as required. A 'Cancel' button is present if edits need to be discarded. An 'Update Blog' button is also present.  
 An 'Alert' toast is displayed at the top-right of the page.
 
 #### **'Add Blog' page**<a name="addblog"></a>
@@ -141,11 +141,11 @@ The 'Logout' page is accessible via a link in the 'My Account' navigation menu i
 
 
 ### **Responsivity**<a name="responsivity"></a>
-The app is responsive on a variety of screen types and sizes, for both the server site and Heroku app. 
-It has been checked via the browser tool list of responsive devices, both portrait and landscape. It has also been checked on a variety of browsers, including Chrome, Microsoft Edge, and Safari.
-The Heroku deployed app was checked on a Lenovo ThinkPad, iPhone X and Huawei MediaPad T5.
-[Bootstrap](https://www.getbootstrap.com/) classes and media queries were utilised throuhout the app to format the pages and elements. 
-[Am I Responsive](http://ami.responsivedesign.is/) displays various site pages, including the homepage, log in page, all products and blog details pages.
+The app is responsive on a variety of screen types and sizes, for both the server site and Heroku app.  
+It has been checked via the browser tool list of responsive devices, both portrait and landscape. It has also been checked on a variety of browsers, including Chrome, Microsoft Edge, and Safari.  
+The Heroku deployed app was checked on a Lenovo ThinkPad, iPhone X and Huawei MediaPad T5.  
+[Bootstrap](https://www.getbootstrap.com/) classes and media queries were utilised throuhout the app to format the pages and elements.  
+[Am I Responsive](http://ami.responsivedesign.is/) displays various site pages, including the homepage, log in page, all products and blog details pages.  
 
 ![alt Responsive Design](media/readme/am_i_responsive_mp4.PNG "Responsive Design")  
 ### **Design**<a name="design"></a>
@@ -155,23 +155,25 @@ The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq
 Online Link: https://share.balsamiq.com/c/wUTkyRkeqqndXtveXLfFyr.png
 ![alt Wireframes](media/readme/wireframes_mp4.png "Wireframes")
 
+#### **Schema**<a name="schema"></a>
+
 #### **Color Palette**<a name="palette"></a>
-The colours for the Indulgem app were chosen to create a luxurious and warm feel that reflects the beauty of the jewellery. 
-An online tool, [Image Colour Picker](https://www.imagecolorpicker.com/) was used to help extract colours from some of the images used on the site, including some product images and the banner background.
-The colour palette was prepared at [Coolers](https://www.coolors.com/) website:  
+The colours for the Indulgem app were chosen to create a luxurious and warm feel that reflects the beauty of the jewellery.  
+An online tool, [Image Colour Picker](https://www.imagecolorpicker.com/) was used to help extract colours from some of the images used on the site, including some product images and the banner background.  
+The colour palette was prepared at [Coolers](https://www.coolors.com/) website:   
 
 ![alt Colour Palette](media/readme/colour_palette_mp4.png "Colour Palette")  
 
 #### **Images**<a name="images"></a>
-The images on the site were sourced from Pexels (www.pexels.com) and Unsplash (www.unsplash.com). 
-[Font Awesome](https://fontawesome.com/) was used for the logo gem, bag, profile, twitter and secure checkout icons in the app (also used for various arrows on buttons). 
+The images on the site were sourced from Pexels (www.pexels.com) and Unsplash (www.unsplash.com).  
+[Font Awesome](https://fontawesome.com/) was used for the logo gem, bag, profile, twitter and secure checkout icons in the app (also used for various arrows on buttons).  
 Images are not skewed or pixelated.
 
 #### **Typography**<a name="typography"></a> 
-[Google Fonts](https://fonts.google.com/) were employed for the text on the app. 
-['WindSong'](https://fonts.google.com/specimen/WindSong?query=winds#standard-styles) font was used for the 'Indulgem' logo.
-['Playball'](https://fonts.google.com/specimen/Playball?query=playball) font was used for the page and modal headings throughout the app.
-['Raleway'](https://fonts.google.com/specimen/Raleway?query=Raleway) font was used for the main text throughout the app.
+[Google Fonts](https://fonts.google.com/) were employed for the text on the app.  
+['WindSong'](https://fonts.google.com/specimen/WindSong?query=winds#standard-styles) font was used for the 'Indulgem' logo.  
+['Playball'](https://fonts.google.com/specimen/Playball?query=playball) font was used for the page and modal headings throughout the app.  
+['Raleway'](https://fonts.google.com/specimen/Raleway?query=Raleway) font was used for the main text throughout the app.  
 
 #### **Current Features**<a name="current"></a>
 - The app contains a back-to-top button on the all products and blog pages (JS)
@@ -181,6 +183,7 @@ Images are not skewed or pixelated.
 - 'Edit' and 'Delete' links are present and functional for products/blog/blog comments if Admin/Superuser
 - Crispy forms are used throughout the app
 - Blog and blog comments (2 new models added to the app)
+- A gem Favicon is included 
 - Stripe payments
 - 'Sign Up' and 'Log In' pages contain links to one another for ease of use for new users  
 
@@ -192,17 +195,17 @@ Images are not skewed or pixelated.
 ### **UX (User Experience)** <a name="userexperience"></a>
 
 #### **Strategy Plane**<a name="strategy"></a>
-The 'Indulgem' app is designed to appeal to customers who wish to purchase elegant jewellery. The layout, colour and style are warm, yet muted and earthy, appealing and sublime, as expected based on the product. It is not loud or jarring for the customer.
+The 'Indulgem' app is designed to appeal to customers who wish to purchase elegant jewellery. The layout, colour and style are warm, yet muted and earthy, appealing and sublime, as expected based on the product. It is not loud or jarring for the customer.  
 The customers this site and product appeals to  would be aptly targeted with this design and layout.
 
 #### **Scope Plane**<a name="scope"></a>
-The app use is intuitive, with dropdown menus and progress buttons where expected. Users can sign up to create a profile, log in, purchase items at various sizes and quantities, and comment on the blogs.
-Admin users can also create, edit and delete content. 
+The app use is intuitive, with dropdown menus and progress buttons where expected. Users can sign up to create a profile, log in, purchase items at various sizes and quantities, and comment on the blogs.  
+Admin users can also create, edit and delete content.  
 Toast messages are displayed to relay success, alert and error messages, where appropriate. 
 
 #### **Structure Plane**<a name="structure"></a>
-The structure of the app brings the users attention to the products, blogs and forms. The homepage contains an image and a single button. This image is an underlay on all remaining site pages. 
-All other pages contain a light-coloured, offset overlay, which hosts the product images, for example. Forms and details contain white card backgrounds along with the overlay (product details, blogs and  for example).
+The structure of the app brings the users attention to the products, blogs and forms. The homepage contains an image and a single button. This image is an underlay on all remaining site pages.  
+All other pages contain a light-coloured, offset overlay, which hosts the product images, for example. Forms and details contain white card backgrounds along with the overlay (product details, blogs and  for example).  
 Layout design, form design and buttons are uniform and intuitive. All links and buttons work as expected per user type. 
 
 #### **Skeleton Plane**<a name="skeleton"></a>
@@ -259,12 +262,13 @@ As a Shopper I want to be able to:
 
 
 ### **Testing**<a name="testing"></a>
-User testing was carried out throughout the project to ensure that the site operates as expected during creation, and when deployed. 
-Site navigation, links, buttons and forms were tested for correct functionality, along with various features (edit, delete, update, remove, checkout, sign up and more).
-App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.  
-Heroku App User Details are as follows:
-Username: maryq  Password: Shopping1!
-Admin: Details submitted with project
+User testing was carried out throughout the project to ensure that the site operates as expected during creation, and when deployed.  
+Site navigation, links, buttons and forms were tested for correct functionality, along with various features (edit, delete, update, remove, checkout, sign up and more).  
+App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.   
+Heroku App User Details are as follows:  
+- Username: maryq  Password: Shopping1!  
+- Admin: Details submitted with project   
+
 The following tests were carried out on both desktop and mobile views.
 
 #### **Non-Admin User Testing**<a name="usertesting"></a>
@@ -339,3 +343,103 @@ App tests were ran throughout project creation to verify that each feature worke
 The following bugs were discovered and fixed during project creation: 
 - Sign up and email receipt not working. Error caused by linter line fixes for the AUTH_PASSWORD_VALIDATORS in settings.py. Lines left as is to fix the error
 - Display for mobile not working as expected for 'Shopping Bag' and 'Checkout' views in the Heroku app only. Error caused by duplicated media query heading in base.css. Once removed, the display for these pages was fixed
+
+### **Validation**<a name="validation"></a>
+
+**HTML** The HTML code was validated at https://validator.w3.org/. See results:  [HTML validated.](media/readme/html_validation.png)<br>
+**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. See results:  [CSS validated.](media/readme/validation/css_validation.png)<br>
+**Jshint** JavaScript code was validated at http://jshint.com/. See results:  [Jshint validated.](media/readme/pep8_validation.png)<br>  
+**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. See results:  [PEP8 validated.](media/readme/pep8_validation.png)<br>  
+
+### **Technologies**<a name="technologies"></a>
+- [Git](#https://git-scm.com/) - Version control, records imperative mood commit messages
+- [GitHub](#https://github.com/): Stores the milestone 4 project repository
+- [Gitpod](#https://www.gitpod.io/): Environment used to build the app
+- [Django](#https://www.djangoproject.com/): Framework used for project development
+- HTML: Language used to create the app pages.
+- CSS: Styles the app
+- [JavaScript](#https://www.javascript.com/): Interactivity (e.g. back-to-top button)
+- [Python](#https://www.python.org/) - Programming language used to create the app
+- [Balsamiq](#https://balsamiq.com/): Wireframes
+- [Coolors](#https://coolors.co/): Prepare the colour palette
+- [Bootstrap 4](#): Styling and layout classes
+- [Google Fonts](#https://fonts.google.com/): Fonts x 3 sourced for use on the site
+- [Fontawesome](#https://fontawesome.com/): Icons used throughout the site
+- Django Crispy Forms: Form rendering throught the app
+- [Temp Mail](#https://temp-mail.org/en/): Provides a temporary email address and inbox
+- [Favicon](#https://favicon.io/): Site favicon (gem)
+- [Heroku](#https://heroku.com/): Where the live site is deployed.
+- [Django Secret Key Generator)](#https://miniwebtool.com/django-secret-key-generator/): generates a secret key for Heroku app testing
+- [Stripe](#https://www.stripe.com/): Payment processing
+- [AWS](#https://aws.amazon.com/): Hosts the site's static and media files
+ -[W3C HTML validator](https://validator.w3.org/): Validate site html code
+- [W3C CSS validator](#https://jigsaw.w3.org/css-validator/): Validate site css code
+- [JSHint](#https://jshint.com/): Validate JavaScript code
+- [pep8](#https://pypi.org/project/pep8/): Validate python code
+
+### **Deployment**<a name="deployment"></a>
+
+Deployment and version control for the app was carried out with GitHub and Heroku.  
+
+#### Deploy to Heroku via the Website
+
+1. Go to [Heroku](#https://www.heroku.com) and create an account
+2. Click on 'New' and 'Create App'. Name the app and choose the appropriate region
+3. Provide a new Postgres database by clicking in the 'Resources' tab and adding 'Heroku Postgres'
+4. In the Gitpod terminal, install dj_database_url and psycopg2 using the pip3 install command
+5. Freeze requirements by typing '''pip3 freeze > requirements''' in the terminal
+6. In the 'Indulgem' main app - settings.py file, import dj_database_url and replace the default configuration with a call to dj_database_url.parse, adding the database URL from config variables in Heroku
+7. Migrate using '''python3 manage.py migrate''' in the terminal
+8. Load the categories using '''python3 manage.py load data categories'''
+9. Load the products using '''python3 manage.py load data categories'''
+10. Create a superuser (admin) using '''python3 manage.py create superuser'''
+11. The app and database are set up on Heroku
+12. Add 'if' statement to DATABASES in settings.py to ensure that the Heroku version of the app connects to Postgres when defined, otherwise it connects to SQLite
+13. Install gunicorn using '''python3 install gunicorn''' and freeze requirements.txt
+14. Create Procfile
+15. Temporarily disable collectstatic using '''heroku config:set DISABLE_COLLECTSTATIC=1 --app indulgem-mp4'''
+16. Add the hostname of the app to ALLOWED_HOSTS in settings.py; add localhost also
+17. Add, commit and push the changes to GitHub
+18. After '''git push''', enter '''git push heroku main''' to deploy to Heroku (sans static files)
+19. To automatically deploy when changes are pushed to GitHub, click on the 'Deploy' tab for the app on the Heroku website
+20. Click on 'GitHub' in the 'Deployment method' section
+21. Enter and search for your GitHub name and the correct repository name in the 'Connect to GitHub' fields. Connect. Confirmed.
+22. Test by removing the SECRET_KEY from settings.py and replacing with a [randomly generated secret key](#https://miniwebtool.com/django-secret-key-generator/)
+23. Click on the 'Reveal Config Vars' button in the 'Config Vars' section
+24. Enter SECRET_KEY in the next available 'KEY' field, then paste the generated key into the adjacent field
+25. In settings.py, replace the SECRET_KEY value with a call to pull the key from the environment, using an empty string as the default
+26. Update DEBUG to 'DEVELOPMENT' in os.environ
+27. Add, commit and push changes to GitHub. Confirm deployments are working (Heroku site app activity)
+28. Go to [Amazon Web Services](#https://aws.amazon.com/) and create a new account
+29. Sign in and search for the S3 Service. Open S3 and create a new bucket (match app name)
+30. Uncheck 'Block All Public Access' and check the acknowledgement tick-box. Create bucket
+31. In 'Properties', turn on 'Static Website Hosting'
+32. In 'Permissions', paste in the updated CORS configuration provided
+33. Generate a bucket policy and copy into the bucket policy editor - add '/*' to the end of the resource key and save
+34. Still in 'Permissions', click on 'Access Control List' and check the 'Everyone' box in the 'Public access' section. Tick 'List objects' in the pop-up form
+35. Open 'IAM' in the AWS Services menu. Create a group followed by a policy to allow access to the bucket. Import a pre-built 'S3 full access policy' to the JSON tab
+36. Copy the bucket ARN from the bucket policy (S3) and paste into the 'Resource' value. Duplicate and add '/*' to the end of the pasted line
+37. Review, name and add description for the policy. Create policy. Confirm
+38. Attach the policy to the newly created group
+39. Create user for the group ('Add User' on the 'Users' page). Enter a username and check the 'Programmatic Access' Access type tick-box. Click 'Next'. Add user to group
+40. Once the user is created, download the user's access key CSV file - store safely, as it is not accessible again
+41. In the Gitpod terminal, '''pip3 install boto3''' and '''pip3 install django-storages'''
+42. Freeze requirements again and add to INSTALLED APPS in settings.py
+43. Add an 'if' statement to USE_AWS in the environment to connect Django to S3
+44. Add AWS keys to Config Vars in Heroku and set USE_AWS to True. Remove DISABLE_COLLECTSTATIC variable
+45. Add bucket name to settings.py
+46. Create custom_storages.py file, and import django.conf settings and S3Boto3Storage
+47. Add classes to tell Django that S3 will store static files in production when collectstatic is ran, and update settings.py static and media files location and storage details. Override STATIC_URL and MEDIA_URL to S3
+48. Add, commit and push changes - automatic deployment to Heroku is triggered, static files collected successfully
+49. In the AWS S3 webpage, the 'static' folder is present
+50. In settings.py, add AWS_S3_OBJECT_PARAMETERS (optional setting). Add, commit and push
+51. Add media files to S3, new 'media' folder. Grant public read access under Manage Public Permissions. Upload
+52. Log in to Django admin and verify the email address, and set it to primary
+53. Add Stripe (Developers - API keys) keys to Heroku config variables
+54. In Stripe, click on Developers, Webhooks, and click on the 'Add endpoint' button
+55. Add the Heroku app url, with /checkout/wh/ at the end. Select 'Receive all Events' and 'Add endpoint'
+56. Reveal the webhook's signing secret and add it to Heroku config variables (match settings.py naming convention)
+57. Send test webhook - confirm the listner is working
+58. The app is now fully deployed to Heroku!
+59. Finally, ensure that 'debug=False' in settings.py  
+
