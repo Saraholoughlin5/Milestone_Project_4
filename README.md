@@ -31,7 +31,7 @@
 	1. [Strategy Plane](#strategy)
 	2. [Scope Plane](#scope)
 	3. [Structure Plane](#structure)
-    	4. [Skeleton Plane](#skeleton)
+    4. [Skeleton Plane](#skeleton)
 	5. [Surface Plane](#surface)
 6. [User Stories](#userstories)
 	1. [Viewing and Navigation](#van)
@@ -40,7 +40,7 @@
 	4. [Purchasing and Checkout](#pac)
 	5. [Admin and Store Management](#adminsm)
 7. [Testing](#testing)
-    	1. [Non-Admin User Testing](#usertesting)
+    1. [Non-Admin User Testing](#usertesting)
 	2. [Admin User Testing](#admintesting)
 	3. [Defensive User Testing](#defensive)
 	4. [App Tests](#apptest)
@@ -51,9 +51,8 @@
 11. [Credit and Acknowledgements](#credits)
 	1. [Mentor](#mentor)
 	2. [Code](#code)
-    	3. [Commits](#commits)
-	4. [Images](#imagesa)
-	5. [Text Content](#textcontent)  
+	3. [Images](#imagesa)
+	4. [Text Content](#textcontent)  
 
 
 # Indulgem Jewellery Store - Milestone Project 4
@@ -61,11 +60,11 @@
 - GitHub Repository: https://github.com/Saraholoughlin5/Milestone_Project_4
 - Heroku App: https://indulgem-mp4.herokuapp.com/
 
-![alt Indulgem Homepage](media/readme/homepage.pnt) "Indulgem Homepage" )  
+![alt Indulgem Homepage](media/readme/homepage.PNG) "Indulgem Homepage" )  
 Adapted from the Boutique Ado project, (Code Institute)
 
 ### **Purpose and Features**<a name="purpose"></a>
-For this milestone project I have built an e-commerce jewellery store. Features include easily navigated and sorted products, a blog, blog commenting,  
+For this milestone project I have built an e-commerce jewellery store. Features include easily navigated and sorted products, a blog and blog commenting.  
 Users can sign up, view their profile, view products, change product size where applicable and increase/decrease quiantity (max: 5), add items to the shopping bag, use Stripe payments, checkout, and receive confirmation emails.  
 The can also view the blog page, which displays a summary of all available blogs, and they can add comments if logged in to their profile.  
 A back-to-top button has been included on the 'All Products', 'Blog' and 'Blog Details' pages.  
@@ -153,9 +152,10 @@ The Heroku deployed app was checked on a Lenovo ThinkPad, iPhone X and Huawei Me
 #### **Wireframes**<a name="wireframes"></a>
 The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq.com). These were the initial wireframes created at the start of the project, and the final views have evolved during creation of the app.  
 Online Link: https://share.balsamiq.com/c/wUTkyRkeqqndXtveXLfFyr.png
-![alt Wireframes](media/readme/wireframes_mp4.png "Wireframes")
+![alt Wireframes](media/readme/wireframes_mp4.png "Wireframes")  
 
 #### **Schema**<a name="schema"></a>
+![alt Colour Palette](media/readme/mp4_schema.png "Colour Palette")  
 
 #### **Color Palette**<a name="palette"></a>
 The colours for the Indulgem app were chosen to create a luxurious and warm feel that reflects the beauty of the jewellery.  
@@ -171,9 +171,9 @@ Images are not skewed or pixelated.
 
 #### **Typography**<a name="typography"></a> 
 [Google Fonts](https://fonts.google.com/) were employed for the text on the app.  
-['WindSong'](https://fonts.google.com/specimen/WindSong?query=winds#standard-styles) font was used for the 'Indulgem' logo.  
-['Playball'](https://fonts.google.com/specimen/Playball?query=playball) font was used for the page and modal headings throughout the app.  
-['Raleway'](https://fonts.google.com/specimen/Raleway?query=Raleway) font was used for the main text throughout the app.  
+- ['WindSong'](https://fonts.google.com/specimen/WindSong?query=winds#standard-styles) font was used for the 'Indulgem' logo.  
+- ['Playball'](https://fonts.google.com/specimen/Playball?query=playball) font was used for the page and modal headings throughout the app.  
+- ['Raleway'](https://fonts.google.com/specimen/Raleway?query=Raleway) font was used for the main text throughout the app.  
 
 #### **Current Features**<a name="current"></a>
 - The app contains a back-to-top button on the all products and blog pages (JS)
@@ -223,7 +223,7 @@ As a Shopper I want to be able to:
 - View a list of products so that I can select some products to purchase
 - View individual product and services details so that I can identify the price, description, product rating, product image and available sizes
 -  Quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase
-- Easily view the total of my purchases at any time so that I can avoid spending too much
+- Easily view the total of my purchases at any time so that I can avoid spending too much  
 As a Site User I want to be able to: 
 - View a blog, whether logged in or not so that I can read about items that might interest me and inform my purchases
 - Add a comment to a blog so that I can take part in discussions or ask for advice
@@ -238,7 +238,7 @@ As a Site User I want to be able to:
 As a Shopper I want to be able to: 
 - Sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products
 - Sort a specific category of product so that I can find the best priced or bets rated product in a specific category, or sort the products in that category by name
-- Sort multiple categories of products simultaneously so that I can find the best priced or bets rated product across broad categories, such as "clothing" or "homeware"
+- Sort multiple categories of products simultaneously so that I can find the best priced or bets rated product across broad categories, such as "rings" or "necklace sets"
 - Search for a product by name or description so that I can find a specific product I'd like to purchase
 - Easily see what I've searched for and the number of results so that I can quickly decide whether the product I want is available
 #### **Purchasing and Checkout**<a name="pac"></a>
@@ -267,7 +267,7 @@ Site navigation, links, buttons and forms were tested for correct functionality,
 App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.   
 Heroku App User Details are as follows:  
 - Username: maryq  Password: Shopping1!  
-- Admin: Details submitted with project   
+- Admin: Details submitted with project (additional notes)  
 
 The following tests were carried out on both desktop and mobile views.
 
@@ -325,6 +325,7 @@ Defensive testing tests were ran as required throughout project creation. These 
 
 - Add blog/product attempt while logged out by adding '/add_blog' or '/add_product' to the end of the browser URL for the app - 404 error page displayed
 - Edit blog/product while logged out by adding '/edit_blog' or '/edit_product' to the end of the browser URL for the app - 404 error page displayed
+- Internal server error - 500 error page - also prepared  
 - Django allauth files used to handle user sign up, login and more
 - Confirmation modal added to the delete link for products to prevent accidental removal (not added to blog as it is not as imperative; future update)
 - Config Variables stored in Heroku to ensure they are not publicly available (declared in main app settings.py file)
@@ -346,33 +347,33 @@ The following bugs were discovered and fixed during project creation:
 
 ### **Validation**<a name="validation"></a>
 
-**HTML** The HTML code was validated at https://validator.w3.org/. See results:  [HTML validated.](media/readme/html_validation.png)<br>
-**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. See results:  [CSS validated.](media/readme/validation/css_validation.png)<br>
-**Jshint** JavaScript code was validated at http://jshint.com/. See results:  [Jshint validated.](media/readme/pep8_validation.png)<br>  
-**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. See results:  [PEP8 validated.](media/readme/pep8_validation.png)<br>  
+**HTML** The HTML code was validated at https://validator.w3.org/. See results:<br> ![alt HTML validated](media/readme/html_validation.PNG "HTML validated")<br>
+**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. See results:<br>  ![alt CSS validated](media/readme/css_validation.PNG "CSS validated")  <br>
+**Jshint** JavaScript code was validated at http://jshint.com/. See results:<br>  ![alt Jshint validated](media/readme/jshint_validation.PNG "Jshint validated")  <br><br>  
+**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. See results:<br>  ![alt pep8 validated](media/readme/pep8_validation.PNG "pep9 validated")  <br>  
 
 ### **Technologies**<a name="technologies"></a>
-- [Git](#https://git-scm.com/) - Version control, records imperative mood commit messages
-- [GitHub](#https://github.com/): Stores the milestone 4 project repository
-- [Gitpod](#https://www.gitpod.io/): Environment used to build the app
-- [Django](#https://www.djangoproject.com/): Framework used for project development
+- [Git](https://git-scm.com/) - Version control, records imperative mood commit messages
+- [GitHub](https://github.com/): Stores the milestone 4 project repository
+- [Gitpod](https://www.gitpod.io/): Environment used to build the app
+- [Django](https://www.djangoproject.com/): Framework used for project development
 - HTML: Language used to create the app pages.
 - CSS: Styles the app
-- [JavaScript](#https://www.javascript.com/): Interactivity (e.g. back-to-top button)
-- [Python](#https://www.python.org/) - Programming language used to create the app
-- [Balsamiq](#https://balsamiq.com/): Wireframes
-- [Coolors](#https://coolors.co/): Prepare the colour palette
-- [Bootstrap 4](#): Styling and layout classes
-- [Google Fonts](#https://fonts.google.com/): Fonts x 3 sourced for use on the site
-- [Fontawesome](#https://fontawesome.com/): Icons used throughout the site
+- [JavaScript](https://www.javascript.com/): Interactivity (e.g. back-to-top button)
+- [Python](https://www.python.org/) - Programming language used to create the app
+- [Balsamiq](https://balsamiq.com/): Wireframes
+- [Coolors](https://coolors.co/): Prepare the colour palette
+- [Bootstrap 4](https://getbootstrap.com/): Styling and layout classes
+- [Google Fonts](https://fonts.google.com/): Fonts x 3 sourced for use on the site
+- [Fontawesome](https://fontawesome.com/): Icons used throughout the site
 - Django Crispy Forms: Form rendering throught the app
-- [Temp Mail](#https://temp-mail.org/en/): Provides a temporary email address and inbox
-- [Favicon](#https://favicon.io/): Site favicon (gem)
-- [Heroku](#https://heroku.com/): Where the live site is deployed.
-- [Django Secret Key Generator)](#https://miniwebtool.com/django-secret-key-generator/): generates a secret key for Heroku app testing
-- [Stripe](#https://www.stripe.com/): Payment processing
-- [AWS](#https://aws.amazon.com/): Hosts the site's static and media files
- -[W3C HTML validator](https://validator.w3.org/): Validate site html code
+- [Temp Mail](https://temp-mail.org/en/): Provides a temporary email address and inbox
+- [Favicon](https://favicon.io/): Site favicon (gem)
+- [Heroku](https://heroku.com/): Where the live site is deployed.
+- [Django Secret Key Generator)](https://miniwebtool.com/django-secret-key-generator/): generates a secret key for Heroku app testing
+- [Stripe](https://www.stripe.com/): Payment processing
+- [AWS](https://aws.amazon.com/): Hosts the site's static and media files
+- [W3C HTML validator](https://validator.w3.org/): Validate site html code
 - [W3C CSS validator](#https://jigsaw.w3.org/css-validator/): Validate site css code
 - [JSHint](#https://jshint.com/): Validate JavaScript code
 - [pep8](#https://pypi.org/project/pep8/): Validate python code
@@ -381,7 +382,7 @@ The following bugs were discovered and fixed during project creation:
 
 Deployment and version control for the app was carried out with GitHub and Heroku.  
 
-#### Deploy to Heroku via the Website
+#### Deploy to Heroku
 
 1. Go to [Heroku](#https://www.heroku.com) and create an account
 2. Click on 'New' and 'Create App'. Name the app and choose the appropriate region
@@ -443,3 +444,41 @@ Deployment and version control for the app was carried out with GitHub and Herok
 58. The app is now fully deployed to Heroku!
 59. Finally, ensure that 'debug=False' in settings.py  
 
+### **Credits and Acknowledgements**<a name="credits"></a>
+
+#### **Mentor** <a name="mentor"></a>
+Thank you once again to my mentor Spencer Barriball for his advice on the blog and blog comments, and for his guidance.<br>
+
+#### **Code**<a name="code"></a>
+The app was created by referring to the Code Institute Boutique Ado Django project. Python and JS code was updated as required to reflect functionality and interactivity. Bootstrap classes were employed for app layout and style.
+
+#### **Images**<a name="imagesa"></a>
+The background, product and blog images were sourced from [Unsplash](https://unsplash.com/) and [Pexels](https://pexels.com), as laid out below:
+| Name                                | Image                                       |
+| :---------------------------------- | :------------------------------------------ | 
+| Danielle Gehler	| Homepage background image         |
+| Danielle De Angelis	| Banner image                 |  
+| FIGIST CO	| Diamond Gold Ring image         |
+| Max Ducourneau| Sun, Moon and Stars image         |
+| Romina BM	| Silver Necklace & Earrings image         |
+| peng wang	| Floral Platinum Necklace Set image                  |
+| Jasmin Egger	| Heart Silver Necklace and Keychain image                  |
+| agus donat	| Double Diamond image                 |
+| Lexy Lammerink	| Gold Bangles image                 |  
+| Mark S Johnson	| Lord of the Rings Set image                 |  
+| Birgith Roosipuu	| Gold and White Gold Hoop Earrings image                 |  
+| Carmen Lopez		| Children's Gold Necklaces image                 |  
+| Laurissi	| Gold Italian Ring image                 |  
+| Juan Burgos	| Gold Double Necklace & Pendant image                 |  
+| Kazzle John Delbo	| Silver Ring & Gem Set image                 |  
+| Alyssa Hurley		| Triple Platinum and Diamond image                 |  
+| Alyssa Hurley		| Platinum Necklace Choker & Rings image                 |  
+| Thorn Yang	| Soundbite Silver Ring image                 |  
+| Sabrinna Ringquist	| Platinum and Zirconia image                 |  
+| Carmen Alarcón	| Pearl & Gold Earrings image                 |  
+| Glauber Torquato	| Bridal Sets blog image                 |  
+| Mathilde Langevin	| Clean Rings blog image                 |  
+
+
+#### **Text Content**<a name="textcontent"></a>
+Blog text was altered from https://www.bevilles.com.au/blogs/news.  All product titles and descriptions were provided by me.
