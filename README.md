@@ -118,7 +118,7 @@ The 'Blog' page displays a panel list of summarised blogs. Each blog panel inclu
 The username and date/time submission information is also displayed.  
 If logged in as Admin, 'Edit' and 'Delete' links are present - NOTE: there is no modal linked to the blog delete link (future feature).  
 The back-to-top button is also present on this page, visible once scroll threshold is reached.
-The blog can be read without logging in.
+The blog can be read without logging in.  
 
 #### **'Blog Details' page**<a name="blogdetails"></a>
 The 'Blog Details' page is accessible via the 'Read On' button on the 'Blog' page. The page includes the title, image and full description, as well as the username and date/time submission information.  
@@ -366,7 +366,8 @@ The following bugs were discovered and fixed during project creation:
 - [Bootstrap 4](https://getbootstrap.com/): Styling and layout classes
 - [Google Fonts](https://fonts.google.com/): Fonts x 3 sourced for use on the site
 - [Fontawesome](https://fontawesome.com/): Icons used throughout the site
-- Django Crispy Forms: Form rendering throught the app
+- [Build a Django Blog](https://djangocentral.com/building-a-blog-application-with-django/): Django blog
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Form rendering throught the app
 - [Temp Mail](https://temp-mail.org/en/): Provides a temporary email address and inbox
 - [Favicon](https://favicon.io/): Site favicon (gem)
 - [Heroku](https://heroku.com/): Where the live site is deployed.
@@ -448,6 +449,7 @@ Deployment and version control for the app was carried out with GitHub and Herok
 
 #### **Mentor** <a name="mentor"></a>
 Thank you once again to my mentor Spencer Barriball for his advice on the blog and blog comments, and for his guidance.<br>
+Also, thanks to student Sharon-B (blog guidance) and student Ferdosull for support.
 
 #### **Code**<a name="code"></a>
 The app was created by referring to the Code Institute Boutique Ado Django project. Python and JS code was updated as required to reflect functionality and interactivity. Bootstrap classes were employed for app layout and style.
